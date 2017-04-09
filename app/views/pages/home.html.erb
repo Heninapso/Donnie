@@ -1,20 +1,27 @@
 
+<% content_for(:navbar_class, "navbar-home") %>
+
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("Donnie2.png")%>)">
   <div class="banner-content">
     <h1>Donnie</h1>
     <p>Les RH à qui vous pouvez tout dire... </p>
-    <!-- <a class="btn btn-success btn-lg"></a> -->
+    <a href="#" class="btn-large">Contacter Donnie !</a>
   </div>
+</div>
+
+<div class="container-flex">
+  <h1>Un RH <b>indépendant</b> à votre écoute, <b>quand vous en avez besoin</b>, pour répondre à vos questions</h1>
 </div>
 
 <div class="cards">
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <div class="card">
-        <div class="card-description">
-          <h2>Conseil RH indépendant</h2>
-          <p>Un interlocuteur objectif pour toutes les questions RHs (même quand vous voulez quittez votre poste.</p>
-        </div>
+        .
+          <div class="card-description">
+            <h2>Conseil RH indépendant</h2>
+            <p>Un interlocuteur objectif pour toutes les questions RHs (même quand vous voulez quittez votre poste.</p>
+          </div>
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
@@ -35,3 +42,33 @@
     </div>
   </div>
 </div>
+
+<div class="container-flex">
+  <h1>Vous vous reconnaissez ? Pour en savoir plus, c'est par ici</h1>
+  <a href="#" class="btn-large">Prendre rendez-vous</a>
+  <h1>Pas de question pour le moment, mais vous aimeriez plus d'informations ? Laissez-nous votre mail ! </h1>
+  <a href="#" class="btn-large">Je veux en savoir plus</a>
+</div>
+
+<div class="container-flex">
+  <h1>Mais on me prend pour un mouton ? </h1>
+  <h2>En fait, derrière Donnie, il y a Anne-Sophie Chambon</h2>
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <%= image_tag('ASC.png', width: 100, height: 100) %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <p>Au cours de mes 7 ans d’expérience RH dans un grand groupe français opérant à l’international, j’ai occupé divers poste en recrutement, rémunération & avantages sociaux, promotion de la diversité, sur des périmètres France et International. J'ai notamment eu à recruter (jusqu'à 150 personnes en un an) et à accompagner des collaborateurs dans leur mobilité interne - voire externe, quand nous n'avions pas de poste à leur proposer.
+      <br>
+      J’ai remarqué à quel point il était compliqué de trouver un interlocuteur objectif et professionnel lors d’une évolution externe - sauf à quitter la casquette "corporate" et à faire du politiquement incorrect, et ce n'est pas chose facile en entreprise. Si le développement personnel et professionnel peut être en phase avec les objectifs de l'entreprise, cet équilibre peut également se renverser. C'est là qu'il devient compliqué de faire la part des choses entre le discours d'un RH qui doit avant tout servir les intérêts de l'entreprise, et les aspirations individuelles d'un collaborateur pour qui l'herbe serait vraiment plus verte ailleurs.
+      <br>
+      Les cordonniers étant les plus mal chaussés, j'ai notamment pu le vérifier par moi-même lorsque je ne me suis trouvée en décalage avec mon entreprise sur cette question d'accompagnement individuel.
+      <br>
+      C’est pourquoi j’ai décidé de créer Donnie, pour que chacun puisse devenir réellement acteur de son développement, tout en bénéficiant d’un accompagnement RH professionnel indépendant. </p>
+    </div>
+
+  </div>
+
+</div>
+
+

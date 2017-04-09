@@ -10,6 +10,25 @@
   justify-content: space-between;
 }
 
+.navbar-home {
+  background: transparent;
+  position: absolute;
+  box-shadow: none;
+  width: 100%;
+  .navbar-wagon-button {
+    background-color: $celadon;
+    border: 2px solid $celadon;
+    &:hover {
+    background-color: $celadon;
+    border: 2px solid $celadon;
+    }
+  }
+  .navbar-wagon-link {
+    color: white;
+    font-weight: bold;
+  }
+}
+
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
   position: fixed;
