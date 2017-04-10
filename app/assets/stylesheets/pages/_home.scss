@@ -1,3 +1,5 @@
+
+
 .container-flex {
   padding: 20px;
   position: relative;
@@ -14,3 +16,39 @@
     color:$celadon;
   }
 }
+
+
+.cta {
+  width: auto;
+  padding: 20px;
+  .button {
+    text-align: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+
+
+
+.description {
+  margin: 100px 20px 50px 20px;
+}
+
+.picture-asc {
+  padding: 50px;
+}
+
+.imgasc {
+  border-radius: 50px;
+}
+
+.description-asc {
+  padding: 20px 30px 20px 0px;
+  color: $gray !important;
+}
+
+.section {
+  margin: 50px 20px;
+}
+
