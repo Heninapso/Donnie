@@ -20,14 +20,21 @@
   width: auto;
   padding: 20px;
   .button {
+    margin-top: 40px;
     text-align: center;
+    padding: 15px;
   }
   h1 {
     font-size: 30px;
+    text-align: center;
   }
 }
 
-
+.card-image {
+position: relative;
+margin-top: 30px;
+text-align: center;
+}
 
 .description {
   margin: 100px 20px 50px 20px;
