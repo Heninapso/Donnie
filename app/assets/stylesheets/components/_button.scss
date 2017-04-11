@@ -1,3 +1,20 @@
+.btn {
+  background-color: $mediumaqua;
+  color: white;
+  border-radius: 20em;
+  padding: 5px 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  border-style: none;
+  line-height: 20px;
+  &:hover {
+    background-color: $celadon;
+  }
+}
+
+
+
 .btn-large {
   background-color: $mediumaqua;
   color: white;
