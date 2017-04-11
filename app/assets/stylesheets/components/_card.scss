@@ -5,7 +5,9 @@
   color: white;
   position: relative;
   margin: 40px 10px 40px 10px;
-  padding: 20px
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px solid #CCCCCC
 }
 .card-description {
   position: absolute;
@@ -18,4 +20,14 @@
 }
 .card-description p {
   font-size: 14px;
+}
+
+.card-notice {
+  position:absolute;
+  bottom: 10px;
+  right: 15px;
+  p {
+    color: white;
+    font-size: 16px;
   }
+}
