@@ -7,6 +7,9 @@
   }
 }
 
+.slogan {
+  font-family: Indie Flower
+}
 .container {
   background-color: white;
   border-radius: 3px;
@@ -18,13 +21,37 @@
   }
 }
 
+.form-inputs {
+  padding-bottom: 10px;
+  label {
+    padding-bottom: 5px;
+    font-weight: lighter;
+    font-family: Roboto;
+    font-size: 16px;
+    color: $pgray;
+  }
+}
+
 
 .sign-in {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
+  p {
+    font-weight: lighter;
+  }
 }
 
 .form-actions .btn {
   width: 100%;
   margin-bottom: 15px;
+}
+
+.tooltip.right .tooltip-inner {
+  background-color: $keppel;
+  color: white;
+}
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: $keppel;
+  color: white;
 }

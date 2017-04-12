@@ -1,7 +1,10 @@
+
+<% content_for(:navbar_class, "navbar-transparent") %>
+
 <div class="registration">
 
   <div class="title">
-    <h2>Créer son accès individuel à Donnie!</h2>
+    <h2>Créer son accès individuel à<span class="slogan"> Donnie!</h2></h2>
   </div>
 
   <div class="container">
@@ -9,13 +12,15 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :email, required: true, autofocus: true, placeholder: "donnie@greenmeadows.ie", label: "Votre email" %>
+        <%= f.input :email, required: true, autofocus: true, placeholder: "donnie@greenmeadows.ie", label: "Votre email", error: "Oups, vous avez oublié d'indiquer votre email"%>
         <%= f.input :password, required: true, placeholder: "******", label: "Choissisez un mot de passe - 6 caractères minimum", error: "On a vraiment besoin d'un mot de passe..."%>
         <%= f.input :password_confirmation, required: true, placeholder: "******", label: "Confirmez votre mot de passe" %>
       </div>
 
       <div class="form-actions">
+        <span id="submit-button" data-toggle="tooltip" data-placement="right" title="En cliquant ici, vous recevrez automatiquement toutes les news de Donnie!">
         <%= f.button :submit, "Créer votre coin d'herbe verte !", class: "btn" %>
+        </span>
       </div>
     <% end %>
 

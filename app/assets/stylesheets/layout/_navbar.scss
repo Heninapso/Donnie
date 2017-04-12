@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.navbar-home {
+.navbar-transparent {
   background: transparent;
   position: absolute;
   box-shadow: none;
@@ -18,15 +18,15 @@
   .navbar-wagon-button {
     background-color: $celadon;
     border: 2px solid $celadon;
-    &:hover {
-    background-color: $celadon;
-    border: 2px solid $celadon;
-    }
   }
   .navbar-wagon-link {
     color: white;
+    text-shadow: 1px 1px 1px $pgray;
     font-weight: bold;
   }
+  .navbar-wagon-link:hover {
+    color: $celadon;
+    }
 }
 
 /* Optional class to fix the navbar on top */
