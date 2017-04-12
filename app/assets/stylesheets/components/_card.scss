@@ -1,6 +1,6 @@
 .card {
   background-color: $mediumaqua;
-  height: 175px;
+  height: 200px;
   background-size: cover !important;
   color: white;
   position: relative;
@@ -15,11 +15,14 @@
   left: 10px;
   top: -8px;
 }
-.card-description h2 {
+.card-description h3 {
   font-size: 20px;
 }
 .card-description p {
   font-size: 14px;
+}
+.card-content p {
+  color: white
 }
 
 .card-notice {

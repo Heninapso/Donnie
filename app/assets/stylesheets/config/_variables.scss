@@ -2,9 +2,13 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Pacifico|Roboto:300,400,700');
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lato:300,400,700,900");
-$base-font: "Open Sans", "Helvetica", "sans-serif";
+$base-font: "Roboto", "Helvetica", "sans-serif";
 $header-font: "Lato", "Helvetica", "sans-serif";
+// $header1-font: "Gloria Hallelujah", "Helvetica", "cursive";
+// $header2-font: "Lato", "Helvetica", "sans-serif";
+// $header3-font: "Roboto", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -18,8 +22,9 @@ $header-font: "Lato", "Helvetica", "sans-serif";
 
 // Font-size and line-height
 // Headers
-$header1-size:25px;
-$header2-size: 20px;
+$header1-size:30px;
+$header2-size: 25px;
+$header3-size: 18px;
 //base size
 $base-size: 16px;
 $base-height: 1.4;
@@ -53,11 +58,6 @@ $celadon: hsla(174%, 61%, 33%, 1);
 // $mediumaqua: #5fc4a4;
 // $keppel: #3ba99c;
 // $celadon: #21897e;
-
-
-h1 {
-  color: $celadon;
-}
 
 p {
   color: $pgray;
