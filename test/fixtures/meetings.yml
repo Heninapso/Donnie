@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  hrservice: one
+  date: 2017-04-13
+  payment_status: MyString
+
+two:
+  user: two
+  hrservice: two
+  date: 2017-04-13
+  payment_status: MyString

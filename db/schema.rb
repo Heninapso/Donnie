@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412144812) do
+ActiveRecord::Schema.define(version: 20170413071957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hrservices", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.float    "price"
+    t.boolean  "bundle_option"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "hrservice_id"
+    t.date     "date"
+    t.string   "payment_status", default: "en attente de paiement"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.string   "status",         default: "à programmer"
+    t.index ["hrservice_id"], name: "index_meetings_on_hrservice_id", using: :btree
+    t.index ["user_id"], name: "index_meetings_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +55,6 @@ ActiveRecord::Schema.define(version: 20170412144812) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "meetings", "hrservices"
+  add_foreign_key "meetings", "users"
 end
