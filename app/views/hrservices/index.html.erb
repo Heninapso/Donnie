@@ -1,9 +1,58 @@
-<h2>Ce que Donnie vous propose</h2>
 
+<div class="banner-sml">
+  <h2>Ce que Donnie! vous propose</h2>
+</div>
 <!-- Carousel with different services going round?  100 vh-->
 <!-- Tab design, when click, expands to give the full description of the service   -->
 
-<% @hrservices.each do |hrservice| %>
-  <%= hrservice.title %>
-  <%= hrservice.description %>
-<% end %>
+<div class="hrservices">
+<!-- <div class="container"> -->
+  <h3 class= "text-center">Deux services pour ENFIN savoir ce que pense un RH de votre CV et/ou de votre LinkedIn</h3>
+  <div class="row">
+    <% @hrservices.each do |hrservice| %>
+      <div class="col-xs-12 col-md-6">
+        <% if hrservice.entry_service? %>
+          <div class="card">
+            <div class="card-service">
+            <div class="card-title"><%= hrservice.title %></div>
+            <%= hrservice.description %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <h3 class= "text-center">Pour aller plus loin</h3>
+  <div class="row">
+    <% @hrservices.each do |hrservice| %>
+      <div class="col-xs-12 col-md-6">
+        <% if !hrservice.entry_service? && !hrservice.ondemand_service? %>
+          <div class="card">
+            <div class="card-service">
+              <div class="card-title"><%= hrservice.title %></div>
+              <%= hrservice.description %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <h3 class= "text-center">Et pour ceux qui veulent un service sur mesure</h3>
+  <div class="row">
+    <% @hrservices.each do |hrservice| %>
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <% if hrservice.ondemand_service? %>
+          <div class="card">
+            <div class="card-section">
+              <div class="card-title"><%= hrservice.title %></div>
+              <%= hrservice.description %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<!-- </div> -->
+</span>
+
+
