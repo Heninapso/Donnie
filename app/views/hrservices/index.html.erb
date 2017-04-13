@@ -1,0 +1,9 @@
+<h2>Ce que Donnie vous propose</h2>
+
+<!-- Carousel with different services going round?  100 vh-->
+<!-- Tab design, when click, expands to give the full description of the service   -->
+
+<% @hrservices.each do |hrservice| %>
+  <%= hrservice.title %>
+  <%= hrservice.description %>
+<% end %>
