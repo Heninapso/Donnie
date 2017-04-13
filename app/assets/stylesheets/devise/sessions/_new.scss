@@ -1,0 +1,61 @@
+.simple_form {
+  line-height: 1.2;
+}
+.signin {
+  background-color: $lightgreen;
+  padding: 10px 20px 50px 20px;
+  h2 {
+    text-align: center;
+    padding: 20px
+  }
+}
+
+.slogan {
+  font-family: Indie Flower
+}
+.container {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 2px 2px solid #999999;
+  width: 400px;
+  .form-inputs {
+    margin: 15px;
+    padding: 5px;
+  }
+}
+
+.form-inputs {
+  padding-bottom: 10px;
+  label {
+    padding-bottom: 5px;
+    font-weight: lighter;
+    font-family: Roboto;
+    font-size: 16px;
+    color: $pgray;
+  }
+}
+
+
+.registration {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  p {
+    font-weight: lighter;
+  }
+}
+
+.registration .btn {
+  margin: 5px
+}
+
+// .links-inline {
+//   text-align: center;
+//   display: flex;
+//   justify-content: space-between;
+
+// }
+.form-actions .btn {
+  width: 100%;
+  margin-bottom: 15px;
+}
