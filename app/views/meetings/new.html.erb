@@ -1,2 +1,22 @@
-<h1>Meetings#new</h1>
-<p>Find me in app/views/meetings/new.html.erb</p>
+<div class="banner-sml">
+  <h2>Votre rendez-vous avec <span class="donnie">Donnie!</span></h2>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="card">
+      <div class="card-title">1. Vous avez choisi : </div>
+      <%= @hrservice.title %>
+      <div class="card-content">
+        <%= @hrservice.description %>
+        <%= @hrservice.price %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="card">
+      <div class="card-title">2. Sélectionnez la date de votre rendez-vous</div>
+    </div>
+  </div>
+</div>
