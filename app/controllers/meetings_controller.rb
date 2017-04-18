@@ -32,7 +32,7 @@ class MeetingsController < ApplicationController
   private
 
   def meetings_params
-    params.require(:meeting).permit(:user, :hrservice, :date)
+    params.require(:meeting).permit(:user, :hrservice, :date, :meeting_slots)
   end
 
 end

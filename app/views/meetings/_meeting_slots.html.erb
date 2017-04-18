@@ -1,0 +1,5 @@
+<%= simple_form_for ([@hrservice, @meeting]) do |f| %>
+  <%= f.label 'Option1' %>
+  <%= f.input_field :meeting_slots, start_day: Date.today + 1, order: [:day, :month, :year], class: "test" %>
+
+<% end %>
