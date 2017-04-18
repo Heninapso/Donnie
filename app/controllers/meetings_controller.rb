@@ -12,8 +12,10 @@ class MeetingsController < ApplicationController
   end
 
   def create
-    @meeting = Meeting.find(params[:id])
-    if @meeting.create
+    @hrservice = Hrservice.find(params[:hrservice_id])
+    @user = current_user
+    @meeting = Meeting.new(meetings_params)
+    if @meeting.save
       redirect_to meetings_index
     else
       render "new"
@@ -32,7 +34,7 @@ class MeetingsController < ApplicationController
   private
 
   def meetings_params
-    params.require(:meeting).permit(:user, :hrservice, :date, :meeting_slots)
+    params.require(:meeting).permit(:user, :hrservice, :date, :meeting_slots, :location_slots)
   end
 
 end

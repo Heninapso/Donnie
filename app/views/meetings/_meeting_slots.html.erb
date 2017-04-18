@@ -1,14 +1,15 @@
 <%= simple_form_for ([@hrservice, @meeting]) do |f| %>
+  <%= f.error_notification %>
   <div class="meeting_option">
-    <%= f.input :meeting_slots, label: "Option 1" %>
+    <%= f.input :meeting_slots, as: :datetime, label: "Option 1" %>
     <%= f.input :location_slots, label: "Secteur souhaité pour le rendez-vous", placeholder: "Adresse, Metro, etc.." %>
   </div>
   <div class="meeting_option">
-    <%= f.input :meeting_slots, label: "Option 2" %>
+    <%= f.input :meeting_slots, as: :datetime, label: "Option 2" %>
     <%= f.input :location_slots, label: "Secteur souhaité pour le rendez-vous", placeholder: "Adresse, Metro, etc.." %>
   </div>
   <div class="meeting_option">
-    <%= f.input :meeting_slots, label: "Option 3" %>
+    <%= f.input :meeting_slots, as: :datetime, label: "Option 3" %>
     <%= f.input :location_slots, label: "Secteur souhaité pour le rendez-vous", placeholder: "Adresse, Metro, etc.." %>
   </div>
   <div class="submit-btn">
