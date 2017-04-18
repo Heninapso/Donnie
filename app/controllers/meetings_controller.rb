@@ -6,9 +6,9 @@ class MeetingsController < ApplicationController
   end
 
   def new
-    @user = current.user
-    @hrservice = Hrservice.find(params[:meeting_id)])
-    @meeting = Meeting.new(meetings_params)
+    @user = current_user
+    @hrservice = Hrservice.find(params[:hrservice_id])
+    @meeting = Meeting.new
   end
 
   def create

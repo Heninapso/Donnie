@@ -17,7 +17,7 @@
             <div class="card-title"><%= hrservice.title %></div>
             <%= hrservice.description %>
             <div class="card-price">Prix : <%= hrservice.price %> €</div>
-            <div class="card-button"><%= link_to 'Prendre RDV', meetings_new_path, class: "btn-small" %></div>
+            <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
             </div>
           </div>
         <% end %>
@@ -34,7 +34,7 @@
             <div class="card-title"><%= hrservice.title %></div>
             <%= hrservice.description %>
             <div class="card-price">Prix : <%= hrservice.price %> €</div>
-            <div class="card-button"><%= link_to 'Prendre RDV', meetings_new_path, class: "btn-small" %></div>
+            <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
             </div>
           </div>
         <% end %>
@@ -51,7 +51,7 @@
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
               <div class="card-price">Prix : <%= hrservice.price %> € / heure</div>
-              <div class="card-button"><%= link_to 'Prendre RDV', meetings_new_path, class: "btn-small" %></div>
+              <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
             </div>
           </div>
         <% end %>
