@@ -12,6 +12,10 @@
     color: white
   }
 }
+
+.large {
+  height: 500px !important;
+}
 .card-description {
   position: absolute;
   // bottom: 10px;
@@ -28,6 +32,9 @@
   color: white
 }
 
+.card-content-no-js p {
+  color: white
+}
 .card-notice {
   position:absolute;
   bottom: 10px;

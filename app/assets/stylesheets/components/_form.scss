@@ -1,6 +1,22 @@
 .simple_form {
   color: black !important;
   label {
-    color: white
+    color: white;
   }
 }
+.submit-btn {
+  text-align: center
+}
+
+.meeting_option {
+  display: flex;
+}
+
+.meeting_location_slots {
+  width: 50%
+}
+
+.meeting_meeting_slots{
+  margin-right: 35px
+}
+

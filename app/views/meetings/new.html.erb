@@ -4,20 +4,19 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-md-6">
-    <div class="card">
+  <div class="col-xs-12 col-md-3">
+    <div class="card large">
       <div class="card-title">1. Vous avez choisi : </div>
       <%= @hrservice.title %>
-      <div class="card-content">
-        <%= @hrservice.description %>
+      <div class="card-content-nojs">
         <%= @hrservice.price %>
       </div>
     </div>
   </div>
-  <div class="col-xs-12 col-md-6">
-    <div class="card">
+  <div class="col-xs-12 col-md-9">
+    <div class="card large">
       <div class="card-title">2. Fixez la date de votre rendez-vous</div>
-      <div class="card-content">
+      <div class="card-content-nojs">
         <p>Donnez-nous trois disponibilités, et précisez-nous le lieu où vous vous trouverez - Donnie vous confirmera sous 48h le RDV</p>
         <!-- Animation for the form to appear and disappear like a modal box -->
         <%= render 'meeting_slots' %>
