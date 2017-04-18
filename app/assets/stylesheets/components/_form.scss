@@ -2,14 +2,21 @@
   color: black !important;
   label {
     color: white;
+    margin-bottom: 10px;
   }
 }
 .submit-btn {
-  text-align: center
+  text-align: center;
+  padding-top: 30px;
+  .btn {
+    background-color: $lightaqua;
+    padding: 12px;
+  }
 }
 
 .meeting_option {
   display: flex;
+  padding-top: 20px;
 }
 
 .meeting_location_slots {
