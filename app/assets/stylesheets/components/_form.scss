@@ -1,0 +1,29 @@
+.simple_form {
+  color: black !important;
+  label {
+    color: white;
+    margin-bottom: 10px;
+  }
+}
+.submit-btn {
+  text-align: center;
+  padding-top: 30px;
+  .btn {
+    background-color: $lightaqua;
+    padding: 12px;
+  }
+}
+
+.meeting_option {
+  display: flex;
+  padding-top: 20px;
+}
+
+.meeting_location_slots {
+  width: 50%
+}
+
+.meeting_meeting_slots{
+  margin-right: 35px
+}
+

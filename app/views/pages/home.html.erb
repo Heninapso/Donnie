@@ -3,7 +3,7 @@
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("Donnie2.png")%>)">
   <div class="banner-content">
-    <h1>Donnie!</h1>
+    <h1><%= image_tag "Donnie V2.png", class: "avatar-large text-center" %>Donnie!</h1>
     <p>Les RH à qui vous pouvez tout dire... </p>
     <a href="#" class="btn-large">Contacter Donnie !</a>
   </div>
@@ -59,11 +59,17 @@
 
 <div class="section">
   <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="card">
+      <!-- A ajuster -->
+        <p>Toutes les informations sont confidentielles chez Donnie! Tout ce que vous nous direz ne pourra JAMAIS être retenu contre vous.</p>
+      </div>
+    </div>
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <div class="cta">
         <h2>Vous vous reconnaissez ? Laissez-nous votre email pour recevoir plus d'informations sur Donnie</h2>
         <div class="button">
-          <%= link_to "J'aime les moutons et je veux en savoir plus !",new_user_registration_path, class: "btn-large"%>
+          <%= link_to "J'aime les moutons et je veux en savoir plus !",hrservices_path, class: "btn-large"%>
         </div>
       </div>
     </div>

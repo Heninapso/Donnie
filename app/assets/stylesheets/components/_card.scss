@@ -7,7 +7,14 @@
   margin: 40px 10px 40px 10px;
   padding: 20px;
   border-radius: 3px;
-  box-shadow: 2px solid #CCCCCC
+  box-shadow: 2px solid #CCCCCC;
+  p {
+    color: white
+  }
+}
+
+.large {
+  height: 500px !important;
 }
 .card-description {
   position: absolute;
@@ -25,6 +32,9 @@
   color: white
 }
 
+.card-content-no-js p {
+  color: white
+}
 .card-notice {
   position:absolute;
   bottom: 10px;
@@ -32,5 +42,27 @@
   p {
     color: white;
     font-size: 16px;
+  }
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bolder;
+  text-shadow: 2px 1px solid #999999
+}
+
+.card-price {
+  position: absolute;
+  right: 15px;
+  bottom: 35px;
+}
+
+.card-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  a {
+    text-decoration: none;
+    color: white
   }
 }
