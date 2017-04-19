@@ -59,6 +59,73 @@
     <% end %>
   </div>
 <!-- </div> -->
-</span>
+</div>
 
 
+<!-- <div class="hrservices">
+  <div class="row">
+    <% @hrservices.each do |hrservice| %>
+      <div class="col-xs-6 col-md-1 col-md-offset-1"><p class="table-content"><%= hrservice.title %></p></div>
+    <% end %>
+  </div>
+  <div class="row">
+    <% @hrservices.each do |hrservice| %>
+      <div class="col-xs-6 col-md-1 col-md-offset-1"><p class="table-content">< test ></div>
+    <% end %>
+  </div>
+</div> -->
+<!-- <td colspan="2">Larry the Bird</td> -->
+
+<div class="hrservices">
+  <h3 class= "text-center">Les prestations de Donnie! en détail</h3>
+  <% @hrservices.each do |hrservice| %>
+    <table class="table table-hover table-small table-responsive">
+        <thead>
+          <tr>
+            <th> </th>
+            <th>Description</th>
+            <th>Modalités</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="col-md-2"><%= hrservice.title %></th>
+            <td class= "col-md-4"><%= hrservice.description %></td>
+            <td class= "col-md-4">
+              <%= hrservice.conditions %>
+            </td>
+            <td class= "col-md-2"><%= hrservice.price %></td>
+          </tr>
+          <tr>
+        </tbody>
+    </table>
+  <% end %>
+</div>
+
+<% content_for (:after_js) do %>
+  <%= javascript_tag do%>
+      <!-- Start of Async Drift Code -->
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('w9h7ice7b2uv');
+    <!-- End of Async Drift Code -->
+  <% end %>
+<% end %>
