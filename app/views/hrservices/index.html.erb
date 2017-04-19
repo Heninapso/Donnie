@@ -16,15 +16,15 @@
             <div class="card-service">
             <div class="card-title"><%= hrservice.title %></div>
             <%= hrservice.description %>
-            <div class="card-price">Prix : <%= hrservice.price %> €</div>
-            <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
+            <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+            <!-- <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div> -->
             </div>
           </div>
         <% end %>
       </div>
     <% end %>
   </div>
-  <h3 class= "text-center">Pour aller plus loin</h3>
+  <h3 class= "text-center"><span class="donnie">Donnie!</span> vous accompagne pour aller voir si l'herbe est plus verte ailleurs</h3>
   <div class="row">
     <% @hrservices.each do |hrservice| %>
       <div class="col-xs-12 col-md-6">
@@ -33,8 +33,8 @@
             <div class="card-service">
             <div class="card-title"><%= hrservice.title %></div>
             <%= hrservice.description %>
-            <div class="card-price">Prix : <%= hrservice.price %> €</div>
-            <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
+            <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+            <!-- <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div> -->
             </div>
           </div>
         <% end %>
@@ -50,8 +50,8 @@
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
-              <div class="card-price">Prix : <%= hrservice.price %> € / heure</div>
-              <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
+              <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
+              <!-- <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div> -->
             </div>
           </div>
         <% end %>
@@ -62,40 +62,26 @@
 </div>
 
 
-<!-- <div class="hrservices">
-  <div class="row">
-    <% @hrservices.each do |hrservice| %>
-      <div class="col-xs-6 col-md-1 col-md-offset-1"><p class="table-content"><%= hrservice.title %></p></div>
-    <% end %>
-  </div>
-  <div class="row">
-    <% @hrservices.each do |hrservice| %>
-      <div class="col-xs-6 col-md-1 col-md-offset-1"><p class="table-content">< test ></div>
-    <% end %>
-  </div>
-</div> -->
-<!-- <td colspan="2">Larry the Bird</td> -->
-
 <div class="hrservices">
-  <h3 class= "text-center">Les prestations de Donnie! en détail</h3>
+  <h3 class= "text-center">Les prestations de <span class="donnie">Donnie!</span> en détail</h3>
   <% @hrservices.each do |hrservice| %>
-    <table class="table table-hover table-small table-responsive">
+    <table class="table table-fixed table-hover table-small table-responsive">
         <thead>
           <tr>
-            <th> </th>
-            <th>Description</th>
-            <th>Modalités</th>
-            <th>Prix</th>
+            <th class="text-center"> </th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Modalités</th>
+            <th class="text-center">Prix</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row" class="col-md-2"><%= hrservice.title %></th>
-            <td class= "col-md-4"><%= hrservice.description %></td>
-            <td class= "col-md-4">
+            <td class="col-md-4"><%= hrservice.description %></td>
+            <td class="col-md-4">
               <%= hrservice.conditions %>
             </td>
-            <td class= "col-md-2"><%= hrservice.price %></td>
+            <td class="col-md-2 text-center"><%= hrservice.price %></td>
           </tr>
           <tr>
         </tbody>
