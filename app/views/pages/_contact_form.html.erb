@@ -1,0 +1,6 @@
+<% simple_form_for (@message) do |f| %>
+  <%= f.input :name, placeholder: "Votre petit nom" %>
+  <%= f.input :email, placeholder: "donnie@sheepmeadows.ie" %>
+  <%= f.input :content, placeholder: "Dites-nous tout!" %>
+  <%= f.submit 'Envoyez', class: 'btn-small' %>
+<% end %>
