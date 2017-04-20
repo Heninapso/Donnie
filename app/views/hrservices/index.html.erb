@@ -75,24 +75,43 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row" class="col-md-2"><%= hrservice.title %></th>
-            <td class="col-md-4"><%= hrservice.description %></td>
-            <td class="col-md-4">
-              <% hrservice.conditions.each do |condition| %>
-                <ul>
-                  <li><%= condition %></li>
-                </ul>
-              <% end %>
-            </td>
-            <td class="col-md-2 text-center">
-              <div class="ul-no-bullets">
-                <li><%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
-                <li>Options : <%= hrservice.options %></li>
-              </div>
-            </td>
-          </tr>
-          <tr>
+          <% if hrservice.hrsbundle? %>
+            <tr class="table-success">
+              <th scope="row" class="col-md-2"><%= hrservice.title %></th>
+              <td class="col-md-4"><%= hrservice.description %></td>
+              <td class="col-md-4">
+                <% hrservice.conditions.each do |condition| %>
+                  <ul>
+                    <li><%= condition %></li>
+                  </ul>
+                <% end %>
+              </td>
+              <td class="col-md-2 text-center">
+                <div class="ul-no-bullets">
+                  <li><%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+                  <li>Options : <%= hrservice.options %></li>
+                </div>
+              </td>
+            </tr>
+          <% else %>
+            <tr>
+              <th scope="row" class="col-md-2"><%= hrservice.title %></th>
+              <td class="col-md-4"><%= hrservice.description %></td>
+              <td class="col-md-4">
+                <% hrservice.conditions.each do |condition| %>
+                  <ul>
+                    <li><%= condition %></li>
+                  </ul>
+                <% end %>
+              </td>
+              <td class="col-md-2 text-center">
+                <div class="ul-no-bullets">
+                  <li><%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+                  <li>Options : <%= hrservice.options %></li>
+                </div>
+              </td>
+            </tr>
+          <% end %>
         </tbody>
     </table>
   <% end %>
