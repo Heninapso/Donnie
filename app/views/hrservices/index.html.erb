@@ -63,9 +63,36 @@
 
 
 <div class="hrservices">
-  <h3 class= "text-center">Les prestations de <span class="donnie">Donnie!</span> en détail</h3>
+  <h3 class= "text-center title">Les prestations de <span class="donnie">Donnie!</span> en détail</h3>
   <% @hrservices.each do |hrservice| %>
-    <table class="table table-fixed table-hover table-small table-responsive">
+    <div class="row">
+      <div class="headers text-center">
+        <div class="col-xs-2 col-md-2"></div>
+        <div class="col-xs-3 col-md-3 header-item">Description</div>
+        <div class="col-xs-4 col-md-4 header-item">Modalités</div>
+        <div class="col-xs-3 col-md-3 header-item">Prix</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="table-contents">
+        <div class="col-xs-2 col-md-2"><%= hrservice.title %></div>
+        <div class="col-xs-3 col-md-3"><%= hrservice.description %></div>
+        <div class="col-xs-4 col-md-4">
+          <% hrservice.conditions.each do |condition| %>
+            <div class="ul-no-bullets">
+              <li><%= condition %></li>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-3 col-md-3">
+          <div class="ul-no-bullets">
+            <li><%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+            <li>Options : <%= hrservice.options %></li>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--     <table class="table table-fixed table-hover table-small table-responsive">
         <thead>
           <tr>
             <th class="text-center"> </th>
@@ -113,7 +140,7 @@
             </tr>
           <% end %>
         </tbody>
-    </table>
+    </table> -->
   <% end %>
 </div>
 
