@@ -77,3 +77,23 @@
   bottom: 10px;
   right: 10px;
 }
+
+.card-table {
+  background-color: #ecf5ef;
+  height: 200px;
+  background-size: cover !important;
+  color: $pgray;
+  position: relative;
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 2px solid #CCCCCC;
+  &:hover {
+    background-color: $lightgreen
+  }
+}
+
+
+
+
+
