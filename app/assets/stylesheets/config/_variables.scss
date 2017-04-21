@@ -66,3 +66,13 @@ p {
 .text-center {
   text-align: center;
 }
+
+.bold {
+  font-weight: bold
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
