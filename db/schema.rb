@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421151838) do
+ActiveRecord::Schema.define(version: 20170421155459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20170421151838) do
     t.string   "meeting_location"
     t.text     "meeting_date_slots",     default: [],                                    array: true
     t.text     "meeting_location_slots", default: [],                                    array: true
+    t.datetime "date_options",           default: [],                                    array: true
+    t.datetime "location_options",       default: [],                                    array: true
     t.index ["hrservice_id"], name: "index_meetings_on_hrservice_id", using: :btree
     t.index ["user_id"], name: "index_meetings_on_user_id", using: :btree
   end
