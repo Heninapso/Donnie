@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>Oups.. Houston, il y a un problème...</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
@@ -51,6 +51,21 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  .button {
+    background-color: $mediumaqua;
+    color: white;
+    border-radius: 20em;
+    padding: 5px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    border-style: none;
+    line-height: 20px;
+    &:hover {
+      background-color: $celadon;
+    }
+  }
   </style>
 </head>
 
@@ -58,9 +73,10 @@
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>Oups.... Houston, on a un problème sur la page....</h1>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Revenons à la page d'acceuil, ce sera plus simple... </p>
+    <a class="button" href="http://www.donnie.fr" target="_blank"><span class="fa fa-home"></span>Retrouver Donnie!</a>
   </div>
 </body>
 </html>
