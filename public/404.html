@@ -4,7 +4,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower"  media="screen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" media="screen" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="screen" rel="stylesheet" />
+    <meta charset="utf-8"></meta>
 
 
     <style>
@@ -13,7 +16,7 @@
     </style>
     <style>
  .sign.error-page-wrapper {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #179eca;
     position:relative;
   }
@@ -80,7 +83,6 @@
     line-height:68px;
     font-weight:600;
     letter-spacing: -2px;
-    text-transform: uppercase;
     color:#ffba00;
   }
 
@@ -165,7 +167,6 @@
  .sign.error-page-wrapper .buttons-container a {
     transition: text-indent .2s linear, color .5s linear, border-color .5s linear;
     font-size:16px;
-    text-transform: uppercase;
     text-decoration: none;
     color:#fff;
     border:2px solid white;
@@ -295,6 +296,10 @@
       box-shadow: 0 0 60px #000000;
     }
 
+    #donnie {
+      font-family: Indie Flower;
+    }
+
 </style>
   </head>
   <body class="sign error-page-wrapper background-color background-image">
@@ -305,19 +310,19 @@
 	<div class="pane">
 		<div class="context sign-text-color">
 			Oops... <br>
-      on dirait que la page que vous cherchez<br>
-			n'existe plus...
+      On dirait que la page que vous cherchez n'existe pas...
 		</div>
 	</div>
 </div>
 <div class="text-container">
 	<div class="context primary-text-color">
 		<p>
-			Retourner sur la page d'accueil de Donnie! par ici!<br>
+			Pour retourner sur la page d'accueil de <span id="donnie">Donnie!</span>,<br> c'est par ici !
+      <i class="fa fa-hand-o-down" aria-hidden="true"></i>
 		</p>
 	</div>
 	<div class="buttons-container">
-		<a class="border-button" href="http://www.donnie.fr" target="_blank">Retrouver Donnie!</a>
+		<a class="border-button" href="http://www.donnie.fr" target="_blank">Retrouver <span id="donnie">Donnie!</span></a>
 	</div>
 </div>
 
