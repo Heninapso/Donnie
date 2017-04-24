@@ -17,8 +17,8 @@ class MeetingsController < ApplicationController
     @hrservice = Hrservice.find(params[:hrservice_id])
     @user = current_user
     @meeting = Meeting.new(meetings_params)
-    @meeting.date_options = meetings_params[:date_options]
-    @meeting.location_options = meetings_params[:location_options]
+    # @meeting.date_options = meetings_params[:date_options]
+    # @meeting.location_options = meetings_params[:location_options]
     if @meeting.save
       redirect_to meetings_index
     else
