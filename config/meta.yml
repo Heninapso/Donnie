@@ -1,5 +1,5 @@
 meta_product_name: "Donnie!"
 meta_title: "Donnie - Les RH à qui vous pouvez tout dire"
 meta_description: "Donnie vous accompagne pour faire le point sur votre parcours professionnel"
-meta_image: "donnie.png"                       # should exist in `app/assets/images/`
+meta_image: "Donnie_meta_tag_test.png"                       # should exist in `app/assets/images/`
 twitter_account: "@Ann3Sophie"   # required for Twitter Cards
