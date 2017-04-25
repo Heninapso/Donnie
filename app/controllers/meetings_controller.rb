@@ -15,12 +15,14 @@ class MeetingsController < ApplicationController
 
   def create
     @hrservice = Hrservice.find(params[:hrservice_id])
-    @user = current_user
     @meeting = Meeting.new(meetings_params)
-    # @meeting.date_options = meetings_params[:date_options]
-    # @meeting.location_options = meetings_params[:location_options]
+    @meeting.hrservice = @hrservice
+    @meeting.user = current_user
+    @meeting.date_options = rebuild_date(meetings_params).to_s
+    @meeting.meeting_location = meetings_params[:meeting_location]
     if @meeting.save
-      redirect_to meetings_index
+      #TODO
+      redirect_to hrservices_path
     else
       render "new"
     end
@@ -38,7 +40,12 @@ class MeetingsController < ApplicationController
   private
 
   def meetings_params
-    params.require(:meeting).permit(:user, :hrservice, :date, :date_options, :location_options)
+    params.require(:meeting).permit(:user, :hrservice, :meeting_date, :meeting_location, :date_options, :location_options)
   end
+
+  def rebuild_date(meetings_params)
+    date = meetings_params['meeting_date(3i)']+'/'+meetings_params['meeting_date(2i)']+'/'+meetings_params['meeting_date(1i)']+'-'+meetings_params['meeting_date(5i)']+'h'+meetings_params['meeting_date(5i)']
+  end
+
 
 end
