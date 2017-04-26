@@ -9,15 +9,14 @@
   align-items: center;
   justify-content: center;
   h1 {
-    font-size: 50px;
+    font-size: 75px;
     font-weight: bold;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   }
   p {
-  font-size: 20px;
-  font-weight: lighter;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
+  font-size: 22px;
+  color: #EDF0F0;
+  margin-bottom: 40px;
   }
 }
 
@@ -40,7 +39,7 @@
 
 .banner-content {
   position: absolute;
-  bottom: 155px;
+  bottom: 90px;
   h1 {
     font-family: Indie Flower;
   }

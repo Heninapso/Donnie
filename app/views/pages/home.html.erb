@@ -3,9 +3,12 @@
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("donnie3.png")%>)">
   <div class="banner-content">
-    <h1><%= image_tag "Donnie_V2.png", class: "avatar-large text-center" %>Donnie!</h1>
-    <p>Les RH à qui vous pouvez tout dire... </p>
-    <%= link_to 'En savoir plus', hrservices_path, class: "btn-large"%>
+    <h1><%= image_tag "Donnie_V2.png", class: "donnie-logo text-center" %>Donnie!</h1>
+    <p>Ne soyez plus un mouton.<br>
+    Redevenez heureux de travailler</p>
+    <div class="cta-home">
+      <%= link_to 'En savoir plus', hrservices_path, class: "btn-xlarge"%>
+    </div>
   </div>
 </div>
 
@@ -14,7 +17,7 @@
 </div>
 
 <div class="cards">
-  <h3 class="title-home">Ce que <span class="donnie">Donnie!</span> fait pour vous : </h3>
+  <h3 class="title-home"><span class="donnie">Donnie!</span> travaille avec vous pour : </h3>
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <div class="card">
@@ -23,9 +26,12 @@
           <%= image_tag 'Talk.png' %>
         </div>
         <div class="card-description">
-          <h3>Conseil RH indépendant</h3>
+          <h3>Mieux vous connaître</h3>
           <div class="card-content hidden">
-            <p>Un interlocuteur objectif pour toutes les questions RHs (même quand vous voulez quittez votre poste.</p>
+            <p><span class="donnie">Donnie!</span> vous aide à</p>
+            <ul>- identifier vos compétences,</ul>
+            <ul>- avoir un retour objectif et professionnel sur l'image que vous renvoyez à des recruteurs,</ul>
+            <ul>- faire le point sur votre CV.</ul>
           </div>
         </div>
       </div>
@@ -33,34 +39,40 @@
     <div class="col-xs-12 col-md-4">
       <div class="card">
         <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-        <div class="card-description">
-          <h3>Accompagnement individuel, selon vos besoins</h3>
           <div class="card-image">
             <%= image_tag 'CV.png'%>
           </div>
-          <div class="card-content hidden">
-            <p>Votre CV ne vous convient plus ? Vous ne vous sentez pas/plus à l'aise en entretien et vous voulez vous entraîner ? Vous vous posez des questions sur votre poste, sur votre environnement de travail ? Un professionnel RH vous écoute et vous aide à trouver des solutions.</p>
+          <div class="card-description">
+            <h3>Mieux comprendre les recruteurs</h3>
+            <div class="card-content hidden">
+              <p><span class="donnie">Donnie!</span> travaille avec vous pour</p>
+              <ul>- décrypter les processus et les attentes des recruteurs</ul>
+              <ul>- mmieux vous mettre en valeur</ul>
+              <ul>- redonner un coup de jeune à votre CV</ul>
+              <ul>- préparer vos entretiens de recrutement</ul>
+            </div>
           </div>
-        </div>
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
       <div class="card">
         <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-        <div class="card-description">
-          <h3>Faire le bilan pour mieux construire votre projet</h3>
           <div class="card-image">
             <%= image_tag 'Exchange.png' %>
           </div>
-          <div class="card-content hidden">
-            <p>Vous avez accumulé les informations sur les formations, les MOOCs, les tutoriaux pour apprendre de nouvelles compétences, mais vous n'arrivez pas à voir où tout cela vous mène ? Nous vous aidons à formuler clairement vos orientations professionnelles.</p>
+          <div class="card-description">
+            <h3>Trouver des réponses à vos questionnements RH</h3>
+            <div class="card-content hidden">
+              <p><span class="donnie">Donnie!</span> fait aussi du sur-mesure, vous écoute et vous conseille</p>
+              <ul>- sur les aspects pratiques RH du quotidien,</ul>
+              <ul>- dans les situations plus complexes (rupture de contrat, pré-contentieux)</ul>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
   <div class="cta text-center">
-    <%= link_to 'En savoir plus', hrservices_path, class: "btn-large"%>
+    <%= link_to 'Découvrir les services', hrservices_path, class: "btn-large"%>
   </div>
 </div>
 
@@ -71,7 +83,7 @@
       <div class="card">
         <div class="card-description">
           <h3>Confidentialité</h3>
-          <p>Toutes les informations sont confidentielles chez Donnie! Tout ce que vous nous direz ne pourra JAMAIS être retenu contre vous.</p>
+          <p>Aucun tabou dans les échanges. Toutes les informations sont confidentielles chez <span class="donnie">Donnie!</span> Tout ce que vous nous direz ne pourra JAMAIS être retenu contre vous.</p>
         </div>
       </div>
     </div>
@@ -79,7 +91,7 @@
       <div class="card">
         <div class="card-description">
           <h3>Au service des individus, pas des entreprises</h3>
-          <p><span class="donnie">Donnie!</span> est un service indépendant, qui vous permet d'avoir un avis professionnel objectif sur vos questions. Nous ne fournissons aucun service aux entreprises.</p>
+          <p><span class="donnie">Donnie!</span> est un service indépendant, qui vous permet d'avoir un avis professionnel objectif sur vos questions. Nous ne fournissons aucun service aux entreprises, donc pas de conflit d'intérêt quant il s'agit de vous conseiller.</p>
         </div>
       </div>
     </div>
@@ -87,7 +99,7 @@
       <div class="card">
         <div class="card-description">
           <h3>Bienveillant</h3>
-          <p><span class="donnie">Donnie!</span> vous écoute vraiment, sans jugement subjectif, pour vous aider à trouver une solution à vos interrogations.</p>
+          <p><span class="donnie">Donnie!</span> vous écoute vraiment, sans jugement subjectif, pour vous aider à trouver une solution à vos interrogations. Chacun a des compétences, parfois des super-pouvoirs, nous smmes là pour vous aider à les mettre en avant.</p>
         </div>
       </div>
     </div>
