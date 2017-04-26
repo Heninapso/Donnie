@@ -7,8 +7,8 @@ class Meeting < ApplicationRecord
 
   validates :user, presence: true
   validates :hrservice, presence: true
-  validates :payment_status, inclusion: { in: ["en attente de paiement", "payé"], default: "en attente de paiement" }
-  validates :status, inclusion: { in: ["à programmer", "programmé", "réalisé"], default: "à programmer" }
+  # validates :payment_status, inclusion: { in: ["en attente de paiement", "payé"], default: "en attente de paiement" }
+  # validates :status, inclusion: { in: ["à programmer", "programmé", "réalisé"], default: "à programmer" }
 
 
 end

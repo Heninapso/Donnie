@@ -1,4 +1,6 @@
 class MeetingsController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [:new]
   def index
   end
 
@@ -13,10 +15,15 @@ class MeetingsController < ApplicationController
 
   def create
     @hrservice = Hrservice.find(params[:hrservice_id])
-    @user = current_user
     @meeting = Meeting.new(meetings_params)
+    @meeting.hrservice = @hrservice
+    @meeting.user = current_user
+    @meeting.meeting_date= meetings_params[:meeting_date]
+    @meeting.meeting_location = meetings_params[:meeting_location]
     if @meeting.save
-      redirect_to meetings_index
+      #TODO
+      redirect_to hrservices_path
+      flash[:notice] = "Vos disponibilités ont bien été enregistrées ! "
     else
       render "new"
     end
@@ -34,7 +41,12 @@ class MeetingsController < ApplicationController
   private
 
   def meetings_params
-    params.require(:meeting).permit(:user, :hrservice, :date, :meeting_slots, :location_slots)
+    params.require(:meeting).permit(:user, :hrservice, :meeting_date, :meeting_location, :date_options, :location_options)
   end
+
+  def rebuild_date(meetings_params)
+    date = meetings_params['meeting_date(3i)']+'/'+meetings_params['meeting_date(2i)']+'/'+meetings_params['meeting_date(1i)']+'-'+meetings_params['meeting_date(4i)']+'h'+meetings_params['meeting_date(5i)']
+  end
+
 
 end
