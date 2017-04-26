@@ -23,7 +23,7 @@ class MeetingsController < ApplicationController
     if @meeting.save
       #TODO
       redirect_to hrservices_path
-      flash[:notice] = "Post successfully created"
+      flash[:notice] = "Vos disponibilités ont bien été enregistrées ! "
     else
       render "new"
     end
