@@ -37,17 +37,18 @@ text-align: center;
   margin: 100px 50px;
 }
 
-.picture-asc {
+.picture-bio {
   padding: 50px;
+  margin-top: 50px;
 }
 
-.imgasc {
+.imgbio {
   border-radius: 50px;
 }
 
-.description-asc {
-  padding: 20px 30px 20px 0px;
-  color: $gray !important;
+
+.section-bio {
+  text-decoration: underline;
 }
 
 .trigger-description {
