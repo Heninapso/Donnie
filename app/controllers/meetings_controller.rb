@@ -18,11 +18,12 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meetings_params)
     @meeting.hrservice = @hrservice
     @meeting.user = current_user
-    @meeting.date_options = rebuild_date(meetings_params).to_s
+    @meeting.meeting_date= meetings_params[:meeting_date]
     @meeting.meeting_location = meetings_params[:meeting_location]
     if @meeting.save
       #TODO
       redirect_to hrservices_path
+      flash[:notice] = "Post successfully created"
     else
       render "new"
     end
@@ -44,7 +45,7 @@ class MeetingsController < ApplicationController
   end
 
   def rebuild_date(meetings_params)
-    date = meetings_params['meeting_date(3i)']+'/'+meetings_params['meeting_date(2i)']+'/'+meetings_params['meeting_date(1i)']+'-'+meetings_params['meeting_date(5i)']+'h'+meetings_params['meeting_date(5i)']
+    date = meetings_params['meeting_date(3i)']+'/'+meetings_params['meeting_date(2i)']+'/'+meetings_params['meeting_date(1i)']+'-'+meetings_params['meeting_date(4i)']+'h'+meetings_params['meeting_date(5i)']
   end
 
 

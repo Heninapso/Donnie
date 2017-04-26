@@ -11,21 +11,35 @@
   .btn {
     background-color: $lightaqua;
     padding: 12px;
+    &:hover {
+      background-color: $celadon;
+    }
   }
 }
-
-.meeting_option {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
+.form-container {
+  padding: 10px;
+  margin-top: 20px;
 }
 
-.meeting_location_slots {
-  width: 50%
-}
+// .meeting_meeting_date {
+//   width: 90%;
+// }
 
-.meeting_meeting_slots{
-  margin-right: 35px
-}
+// .input-group-addon {
+//   width:10%
+// }
+// .meeting_option {
+//   // display: flex;
+//   // justify-content: space-around;
+//   // align-items: center;
+//   padding-top: 20px;
+// }
 
+// .meeting_location_slots {
+//   // width: 50%
+// }
+
+// .input-group-addon {
+//   // display: flex;
+
+// }
