@@ -4,7 +4,7 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("donnie3.png")%>)">
   <div class="banner-content">
     <h1><%= image_tag "Donnie_V2.png", class: "donnie-logo text-center" %>Donnie!</h1>
-    <p>Ne soyez plus un mouton.<br>
+    <p>Ne soyez plus un mouton<br>
     Redevenez heureux de travailler</p>
     <div class="cta-home">
       <%= link_to 'En savoir plus', hrservices_path, class: "btn-xlarge"%>
@@ -166,45 +166,52 @@
     </div>
     <div class="col-xs-12 col-md-7">
       <div class="bio-card">
-        <h3>Anne-Sophie Chambon</h3>
-        <div class="description-bio">
-          <p class="section-bio">Bio</p>
-          <ul class="ul-bio"><p>- Double cursus anglais / RH</p></ul>
-          <ul class="ul-bio"><p>- 7 ans d'expérience RH dans des groupes internationaux</p></ul>
-          <ul class="ul-bio"><p>- Plus de 250 recrutements au compteur, en France et à l'international</p></ul>
-          <ul class="ul-bio"><p>- Des dizaines de personnes accompagnées dans leur évolution professionnelle (mobilité interne, reconversion...)</p></ul>
-        <p class="section-bio">Pourquoi <span class="donnie">Donnie!</span> ?<p> RH mais aussi collaboratrice, j'ai connu les deux côtés du miroir et j'ai été doublement frustrée : </p>
-        <ul class="ul-bio"><p>- En tant que collaboratrice, comme vous, j'ai souffert d'être traitée comme un mouton et de ne trouver personne pour me conseiller quand je ne me sentais plus épanouie au travail</p></ul>
-        <ul class="ul-bio"><p>- En tant que recruteuse et RH, j'ai souffert que l'on me demande de traiter les gens comme des moutons, au nom de l'intérêt de l'entrprise</p></ul>
+        <h3 class="text-center">Anne-Sophie Chambon - Founder & CTO</h3>
+        <div class="section-bio">
+          <p class="header-bio">Bio</p>
+          <ul><p>- Entrepreneuse, fondatrice de <span class="donnie">Donnie!</span>, et créatrice du site</p></ul>
+          <ul><p>- Double cursus anglais / RH</p></ul>
+          <ul><p>- 7 ans d'expérience RH dans des groupes internationaux.</p></ul>
+          <ul><p>- Dernier poste occupé : DRH d'un périmètre international (10 pays, 800 collaborateurs)</p></ul>
+          <ul><p>- Plus de 250 recrutements au compteur, en France et à l'international</p></ul>
+          <ul><p>- Des dizaines de personnes accompagnées dans leur évolution professionnelle (mobilité interne, reconversion...)</p></ul>
+        </div>
+        <div class="section-bio">
+          <p class="header-bio">Pourquoi <span class="donnie">Donnie!</span> ?<p> RH mais aussi collaboratrice, j'ai connu les deux côtés du miroir : </p>
+          <ul><p>- En tant que collaboratrice, comme vous, je sais ce que c'est d'avoir le sentiment de ne pas être écouté(e) quand nos questionnements dévient de la voie d'évolution standard</p></ul>
+          <ul><p>- En tant que recruteuse et RH, après 7 ans à servir les intérêts d'une entreprise, je veux aujourd'hui servir directement les intérêts des hommes et les femmes, indépendamment de l'entreprise. </p></ul>
+        </div>
+        <div class="social-media-links">
+          <a target="_blank" href="https://www.linkedin.com/in/anne-sophie-chambon-920a1637/"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://twitter.com/Ann3sophie"><i class="fa fa-twitter"></i></a>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-md-3 col-md-offset-1">
-      <div class="picture-bio">
-        <%= image_tag('donnie-avatar.png', width: 200, height: 200, class: "imgbio") %>
+    <div class="col-xs-12 col-md-7 col-md-offset-1">
+      <div class="bio-card">
+        <h3 class="text-center">Donnie - Chief Princess Officer</h3>
+        <div class="section-bio">
+          <p class="header-bio">Bio</p>
+          <ul><p>- J'ai 5 ans</p></ul>
+          <ul><p>- Fully bilingual : née en Irlande, je vis désormais en France avec Anne-Sophie</p></ul>
+          <ul><p>- J'aime : les bracelets et les colliers</p></ul>
+          <ul><p>- Je n'aime pas qu'on me prenne pour un mouton</p></ul>
+        </div>
+        <div class="section-bio">
+          <p class="header-bio">Pourquoi <span class="donnie">Donnie!</span> ?<p>
+          <ul><p>- Parce que j'ai compris avec Anne-Sophie que j'avais du leadersheep et qu'elle m'a poussée à le mettre en avant (comme vous demain !)</p></ul>
+          <ul><p>- Parce les discriminations (du style, les moutons, ça n'est bon qu'à brouter), ça me rend chèvre</p></ul>
+        </div>
+        <div class="social-media-links">
+          <a target="_blank" href="https://www.instagram.com/donnie_the_mischievous_sheep/"><i class="fa fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-    <div class="col-xs-12 col-md-7">
-      <div class="bio-card">
-        <h3>Donnie</h3>
-        <div class="description-bio">
-          <p class="section-bio">Bio</p>
-          <ul class="ul-bio"><p>- J'ai 5 ans</p></ul>
-          <ul class="ul-bio"><p>- Fully bilingual : née en Irlande, je vis désormais en France avec Anne-Sophie</p></ul>
-          <ul class="ul-bio"><p>- J'aime : les bracelets et les colliers</p></ul>
-          <ul class="ul-bio"><p>- Je n'aime pas qu'on me prenne pour un mouton</p></ul>
-
-
-
-
-
-          <!-- TO DO -->
-        <p class="section-bio">Pourquoi <span class="donnie">Donnie!</span> ?<p>
-        <ul class="ul-bio"><p>- En tant que collaboratrice, comme vous, j'ai souffert d'être traitée comme un mouton et de ne trouver personne pour me conseiller quand je ne me sentais plus épanouie au travail</p></ul>
-        <ul class="ul-bio"><p>- En tant que recruteuse et RH, j'ai souffert que l'on me demande de traiter les gens comme des moutons, au nom de l'intérêt de l'entrprise</p></ul>
-        </div>
+    <div class="col-xs-12 col-md-3">
+      <div class="picture-bio">
+        <%= image_tag('donnie-avatar.png', width: 200, height: 200, class: "imgbio") %>
       </div>
     </div>
   </div>

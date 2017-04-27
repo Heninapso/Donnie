@@ -16,6 +16,9 @@
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
+              <% hrservice.conditions.each do |condition| %>
+                <ul><%= condition %></ul>
+              <% end %>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
               <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div>
             </div>
@@ -33,6 +36,9 @@
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
+              <% hrservice.conditions.each do |condition| %>
+                <ul><%= condition %></ul>
+              <% end %>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
               <!-- <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div> -->
             </div>
@@ -50,6 +56,9 @@
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
+              <% hrservice.conditions.each do |condition| %>
+                <ul><%= condition %></ul>
+              <% end %>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
               <!-- <div class="card-button"><%= link_to 'Prendre RDV', new_hrservice_meeting_path(hrservice), class: "btn-small" %></div> -->
             </div>
