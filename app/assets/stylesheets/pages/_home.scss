@@ -1,3 +1,4 @@
+//GENERAL
 .section {
   margin: 100px 50px;
   h2 {
@@ -9,6 +10,14 @@
   }
 }
 
+//SERVICES CARDS
+.card-image {
+position: relative;
+margin-top: 30px;
+text-align: center;
+}
+
+//CTA SECTIONS
 .cta {
   width: auto;
   padding: 10px;
@@ -27,35 +36,49 @@
   }
 }
 
-.card-image {
-position: relative;
-margin-top: 30px;
-text-align: center;
+//VALUES
+.title-home {
+  padding: 0 20px
 }
 
-.section {
-  margin: 100px 50px;
-}
-
-.picture-asc {
-  padding: 50px;
-}
-
-.imgasc {
-  border-radius: 50px;
-}
-
-.description-asc {
-  padding: 20px 30px 20px 0px;
-  color: $gray !important;
-}
-
+// BIO SECTION
 .trigger-description {
   margin-top: 40px;
   margin-bottom: -10px;
   font-size: 24px !important;
 }
 
-.title-home {
-  padding: 0 20px
+.picture-bio {
+  padding: 50px;
+  margin-top: 50px;
 }
+.imgbio {
+  border-radius: 50px;
+}
+
+.bio-card {
+  position: relative;
+}
+.section-bio {
+  margin: 20px 0px;
+  line-height: 18px;
+}
+
+.header-bio {
+  text-decoration: underline;
+}
+
+.social-media-links {
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+  padding: 10px;
+  a {
+    text-decoration :none;
+    color: $pgray;
+    font-size: 18px;
+    padding: 3px;
+  }
+}
+
+
