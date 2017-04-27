@@ -21,11 +21,18 @@
   height: 600px
 }
 
+.hrservices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bio-card {
   margin: 40px 10px 40px 10px;
   padding: 20px;
   border-radius: 5px;
   background-color: #F3FFE6;
+  position: relative;
 }
 
 .card-description {
@@ -88,6 +95,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+  text-decoration: none;
+  color:white;
 }
 
 .card-table {

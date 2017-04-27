@@ -11,6 +11,9 @@
 }
 
 //SERVICES CARDS
+.cards b {
+  color:$celadon
+}
 .card-image {
 position: relative;
 margin-top: 30px;
@@ -56,9 +59,6 @@ text-align: center;
   border-radius: 50px;
 }
 
-.bio-card {
-  position: relative;
-}
 .section-bio {
   margin: 20px 0px;
   line-height: 18px;
