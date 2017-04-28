@@ -24,7 +24,7 @@
               </div>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
               <!-- TO DO > link_to paiement / stripe -->
-              <div class="card-button-bottom-right"><%= link_to 'Acheter', class: "btn-small" %></div>
+              <div class="card-button-bottom-right"><%= link_to 'Acheter', '#', class: "btn-small" %></div>
             </div>
           </div>
         </div>
@@ -43,9 +43,12 @@
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
               <% end %>
+              <div class="card-button-bottom-left">
+                <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+              </div>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
               <!-- TO DO > link_to paiement / stripe -->
-              <div class="card-button-bottom-right"><%= link_to 'Acheter', class: "btn-small" %></div>
+              <div class="card-button-bottom-right"><%= link_to 'Acheter', '#', class: "btn-small" %></div>
             </div>
           </div>
         </div>
@@ -64,9 +67,12 @@
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
               <% end %>
+              <div class="card-button-bottom-left">
+                <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+              </div>
               <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
               <!-- TO DO > link_to paiement / stripe -->
-              <div class="card-button-bottom-right"><%= link_to 'Acheter', class: "btn-small" %></div>
+              <div class="card-button-bottom-right"><%= link_to 'Acheter', '#', class: "btn-small" %></div>
             </div>
           </div>
         <% end %>
@@ -107,6 +113,7 @@
               <% if hrservice.options? %>
                 <li>Options : <%= hrservice.options %></li>
               <% end %>
+              <%= link_to 'Acheter', '#', class: "btn-small" %>
             </div>
           </div>
         </div>
