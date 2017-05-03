@@ -14,14 +14,14 @@
 }
 
 .large {
-  height: 70vh;
+  height: 100vh;
 }
 .values {
   height:28vh
 }
 
 .medium {
-  height: 50vh;
+  height: 40vh;
 }
 
 .hrservices-home {
@@ -85,7 +85,7 @@
   bottom: 35px;
 }
 
-.card-button {
+.card-button-bottom-right {
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -93,6 +93,14 @@
     text-decoration: none;
     color: white
   }
+}
+
+.card-button-bottom-left {
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+  color: white;
+  cursor: pointer;
 }
 
 .card-icon {
