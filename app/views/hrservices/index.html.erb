@@ -22,7 +22,11 @@
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
               </div>
-              <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+              <% if hrservice.title == "Feedback CV/lettre de motivation" %>
+                <div class="card-price">Prix par service (CV ou lettre): <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+              <% else %>
+                <div class="card-price">Prix : <%= number_with_precision(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+              <% end %>
               <!-- TO DO > link_to paiement / stripe -->
               <div class="card-button-bottom-right"><%= link_to 'Acheter', '#', class: "btn-small" %></div>
             </div>
@@ -39,10 +43,12 @@
           <div class="card large">
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
+              <%= hrservice.subtitle %>
               <%= hrservice.description %>
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
               <% end %>
+              <%= hrservice.options %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
               </div>
