@@ -112,7 +112,7 @@
 }
 
 .card-table {
-  background-color: #ecf5ef;
+  background-color: $lightgreen;
   height: 200px;
   background-size: cover !important;
   color: $pgray;
@@ -122,7 +122,7 @@
   border-radius: 3px;
   box-shadow: 2px solid #CCCCCC;
   &:hover {
-    background-color: $lightgreen
+    border: 2px solid $keppel
   }
 }
 
