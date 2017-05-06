@@ -130,13 +130,17 @@
           </div>
           <div class="col-xs-3 col-md-3 row-item vertical-align">
             <div class="ul-no-bullets text-center">
-              <li class="margin"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+              <% if hrservice.title == "Je crois qu'il y a un loup dans ma bergerie, j'ai besoin d'aide" %>
+                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</li>
+              <% else %>
+                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+              <% end %>
               <% if hrservice.options? %>
-                <li>Options : <%= hrservice.options %></li>
+                <li class="margin">Options : <%= hrservice.options %></li>
               <% end %>
               <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                <%= submit_tag 'Acheter', class: "btn-small" %>
+                <%= submit_tag 'Acheter', class: "btn-small"  %>
               <% end %>
             </div>
           </div>
