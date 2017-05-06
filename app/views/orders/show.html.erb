@@ -1,0 +1,6 @@
+<h1>Votre commande</h1>
+<ul>
+  <li>Statut: <%= @order.state %></li>
+  <li>Prestation: <%= @order.hrservice %></li>
+  <li>Montant: <%= humanized_money (@order.amount) %> €</li>
+<ul>

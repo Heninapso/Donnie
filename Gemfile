@@ -20,6 +20,7 @@ gem 'autoprefixer-rails'
 #My gems
 gem 'gibbon'
 gem 'money-rails'
+gem 'stripe'
 
 #datetimepicker
 gem 'momentjs-rails', '>= 2.9.0'
