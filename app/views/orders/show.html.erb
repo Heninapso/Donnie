@@ -1,17 +1,63 @@
-
-<div class="progress-bar">
-  <p>TEST</p>
+<div class="style">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="container-logo">
+        <div class="logo-on-bar">
+          <%= image_tag "Donnie_V2.png", class: "avatar-bordered-sml hidden" %>
+        </div>
+        <div class="logo-on-bar-2">
+          <%= image_tag "Donnie_V2.png", class: "avatar-bordered-sml-2 hidden" %>
+        </div>
+        <div class="logo-on-bar-3">
+          <%= image_tag "Donnie_V2.png", class: "avatar-bordered-sml-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="container-1">
+        <hr class="design-bar active">
+        <hr class="design-bar active">
+        <hr class="design-bar active">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="container-text">
+        <div class="text-bar display">
+          <p>1. Récapitulatif</p>
+        </div>
+        <div class="text-bar display">
+          <p>2. Paiement</p>
+        </div>
+        <div class="text-bar display">
+          <p>3. Confirmation</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="title text-center">
-  <h2>Votre commande chez<span class="slogan"> Donnie!</span></h2>
-</div>
-
-
-<div class="container">
-  <ul>
-    <li>Prestation commandée : <%= @order.hrservice %></li>
-    <li>Montant: <%= humanized_money (@order.amount) %> €</li>
-    <li>Etat de votre commande : <%= @order.state %></li>
-  <ul>
+<div class="style">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="title text-center">
+        <h2 class="text-center">Votre commande chez<span class="slogan"> Donnie!</span> est confirmée </h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="confirmation">
+        <p class="text-center">Nous allons vous contacter dans les prochaines 48h pour organiser le démarrage de la prestation</p>
+        <ul class="ul-no-bullets">
+          <li><p><span class="bold">Prestation commandée :</span> <%= @order.hrservice %></li></p>
+          <li><p><span class="bold">Montant :</span> <%= humanized_money (@order.amount) %> €</li></p>
+          <li><p><span class="bold">Etat de votre commande :</span> <%= @order.state %></li></p>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
