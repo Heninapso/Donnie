@@ -76,7 +76,11 @@
 .card-title {
   font-size: 18px;
   font-weight: bolder;
-  text-shadow: 2px 1px solid #999999
+  text-shadow: 2px 1px solid #999999;
+}
+
+.card-section .italic {
+  font-style: italic
 }
 
 .card-price {

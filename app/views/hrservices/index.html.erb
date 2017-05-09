@@ -49,8 +49,8 @@
           <div class="card large">
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
-              <%= hrservice.subtitle %>
-              <%= hrservice.description %>
+              <p class="italic"><%= hrservice.subtitle %></p>
+              <p><%= hrservice.description %></p>
 
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
