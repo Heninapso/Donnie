@@ -13,20 +13,21 @@
   justify-content: space-around;
 }
 
-.design-bar.active {
-  width: 100%;
+.design-bar, .design-bar-2, .design-bar-3 {
+  width: 100%
+}
+.active {
   border: 4px solid $celadon;
 }
-.design-bar {
-  width: 100%;
+.inactive {
   border: 4px solid $lightgreen;
 }
 
-.text-bar.display p {
+.display p {
   color: $celadon
 }
 
-.text-bar p {
+.text-bar-2.pastel p, .text-bar-3.pastel p {
   color: $lightgreen
 }
 
