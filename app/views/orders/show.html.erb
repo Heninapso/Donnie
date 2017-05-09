@@ -1,6 +1,17 @@
-<h1>Votre commande</h1>
-<ul>
-  <li>Statut: <%= @order.state %></li>
-  <li>Prestation: <%= @order.hrservice %></li>
-  <li>Montant: <%= humanized_money (@order.amount) %> €</li>
-<ul>
+
+<div class="progress-bar">
+  <p>TEST</p>
+</div>
+
+<div class="title text-center">
+  <h2>Votre commande chez<span class="slogan"> Donnie!</span></h2>
+</div>
+
+
+<div class="container">
+  <ul>
+    <li>Prestation commandée : <%= @order.hrservice %></li>
+    <li>Montant: <%= humanized_money (@order.amount) %> €</li>
+    <li>Etat de votre commande : <%= @order.state %></li>
+  <ul>
+</div>
