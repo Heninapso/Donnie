@@ -1,5 +1,34 @@
-.progress-bar {
-  width: 100%;
-  margin-top: 10px;
-  border-top: 1px solid red;
+.style {
+  margin-top: 10vh;
+  margin-bottom: 8vh;
 }
+
+.container-logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-1, .container-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.design-bar.active {
+  width: 100%;
+  border: 4px solid $celadon;
+}
+.design-bar {
+  width: 100%;
+  border: 4px solid $lightgreen;
+}
+
+.text-bar.display p {
+  color: $celadon
+}
+
+.text-bar p {
+  color: $lightgreen
+}
+
+
+
