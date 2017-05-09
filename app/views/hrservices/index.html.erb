@@ -51,10 +51,13 @@
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.subtitle %>
               <%= hrservice.description %>
+
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
               <% end %>
-              <%= hrservice.options %>
+              <% if hrservice.options? %>
+                <p>Options : <%= hrservice.options %></p>
+              <% end %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
                 <p>de détails</p>
