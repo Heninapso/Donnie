@@ -21,6 +21,7 @@
               <% end %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+                <p>de détails</p>
               </div>
               <% if hrservice.title == "Feedback CV/lettre de motivation" %>
                 <div class="card-price">Prix par service (CV ou lettre): <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
@@ -56,6 +57,7 @@
               <%= hrservice.options %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+                <p>de détails</p>
               </div>
               <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
               <!-- TO DO > link_to paiement / stripe -->
@@ -85,6 +87,7 @@
               <% end %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+                <p>de détails</p>
               </div>
               <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
               <!-- TO DO > link_to paiement / stripe -->
