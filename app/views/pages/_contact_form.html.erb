@@ -1,6 +1,13 @@
-<% simple_form_for (@message) do |f| %>
-  <%= f.input :name, placeholder: "Votre petit nom" %>
-  <%= f.input :email, placeholder: "donnie@sheepmeadows.ie" %>
-  <%= f.input :content, placeholder: "Dites-nous tout!" %>
-  <%= f.submit 'Envoyez', class: 'btn-small' %>
+
+<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+  <%= f.input :name, placeholder: "Votre petit nom", :required => true %>
+  <%= f.input :email, placeholder: "donnie@sheepmeadows.ie", :required => true %>
+  <%= f.input :message, :as => :text, placeholder: "Dites-nous tout!", :required => true %>
+  <div class= "hidden">
+    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+  </div>
+  <div>
+    </br>
+    <%= f.button :submit, 'Envoyer', :class=> "btn" %>
+  </div>
 <% end %>

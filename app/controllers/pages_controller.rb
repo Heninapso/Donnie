@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @message = Message.new
+    @contact = Contact.new
   end
 end
