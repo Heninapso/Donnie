@@ -3,6 +3,7 @@ class HrservicesController < ApplicationController
 
   def index
     @hrservices = Hrservice.all
+    @contact = Contact.new
   end
 
 end
