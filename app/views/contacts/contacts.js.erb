@@ -1,0 +1,21 @@
+<% if @contact.errors.any? %>
+  // TO DO : Display error message stating pb
+  TO DO
+  // Render new review form with errors
+  $('#new_contact').html("<%= j render 'contacts/form'%>");
+<% else %>
+  // Display alert message saying the mail has been sent
+  TO DO
+  // Reset the form
+  $('#new_contact').html("<%= j render 'reviews/form' %>");
+<% end %>
+
+
+
+
+// flash.now[:notice] = "Message reçu 5/5, nous vous répondons sous 48h !"
+//       render root_path
+//     else
+//       flash.now[:error] = "Houston, on a un problème... Pouvez-vous renvoyer votre message ?"
+//       render root_path
+//     end
