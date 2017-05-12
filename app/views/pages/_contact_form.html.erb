@@ -1,6 +1,21 @@
-<% simple_form_for (@message) do |f| %>
-  <%= f.input :name, placeholder: "Votre petit nom" %>
-  <%= f.input :email, placeholder: "donnie@sheepmeadows.ie" %>
-  <%= f.input :content, placeholder: "Dites-nous tout!" %>
-  <%= f.submit 'Envoyez', class: 'btn-small' %>
-<% end %>
+<!-- <div class="section"> -->
+  <div class="row">
+    <div class="col-XS-12 col-md-4 col-md-offset-4">
+      <div class="contact-form text-center">
+        <%= simple_form_for @contact do |f| %>
+          <%= f.input :name, placeholder: "Votre petit nom", label: false, required: true %>
+          <%= f.input :email, placeholder: "donnie@sheepmeadows.ie", label: false, required: true %>
+          <%= f.input :message, as: :text, placeholder: "Dites-nous tout!", label: false, required: true %>
+          <div class= "hidden">
+            <%= f.input :nickname, hint: 'Leave this field blank!' %>
+          </div>
+          <div class="cta">
+            <%= f.button :submit, 'Envoyer', class: "btn-medium" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+
+
