@@ -1,13 +1,21 @@
+<!-- <div class="section"> -->
+  <div class="row">
+    <div class="col-XS-12 col-md-4 col-md-offset-4">
+      <div class="contact-form text-center">
+        <%= simple_form_for @contact do |f| %>
+          <%= f.input :name, placeholder: "Votre petit nom", label: false, required: true %>
+          <%= f.input :email, placeholder: "donnie@sheepmeadows.ie", label: false, required: true %>
+          <%= f.input :message, as: :text, placeholder: "Dites-nous tout!", label: false, required: true %>
+          <div class= "hidden">
+            <%= f.input :nickname, hint: 'Leave this field blank!' %>
+          </div>
+          <div class="cta">
+            <%= f.button :submit, 'Envoyer', class: "btn-medium" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
 
-<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-  <%= f.input :name, placeholder: "Votre petit nom", :required => true %>
-  <%= f.input :email, placeholder: "donnie@sheepmeadows.ie", :required => true %>
-  <%= f.input :message, :as => :text, placeholder: "Dites-nous tout!", :required => true %>
-  <div class= "hidden">
-    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-  </div>
-  <div>
-    </br>
-    <%= f.button :submit, 'Envoyer', :class=> "btn" %>
-  </div>
-<% end %>
+

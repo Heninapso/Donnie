@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(contact_params)
     @contact.request = request
     if @contact.deliver
       respond_to do |format|
@@ -20,6 +20,13 @@ class ContactsController < ApplicationController
         format.js  # <-- idem
       end
     end
+  end
+
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :email, :message)
   end
 
 end
