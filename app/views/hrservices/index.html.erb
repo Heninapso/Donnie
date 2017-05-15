@@ -112,8 +112,11 @@
 <div class="hrservices">
   <div class="row">
     <div class="col-xs-12">
-        <p class="text-center">Vous avez une question mais vous n'êtes pas disponible pour en discuter mainteant ? <br> Envoyez-nous un message : </p>
-          <%= render 'pages/contact_form' %>
+        <h3 class="text-center">Vous avez une question mais vous n'êtes pas disponible pour en discuter mainteant ? </h3>
+        <p class="text-center"> Envoyez-nous un message :
+        <%= mail_to "annesophie.chambon@donnie.fr" do %>
+          <span class="mail-address">annesophie.chambon@donnie.fr</span>
+        <% end %></p>
       </div>
     </div>
   </div>
