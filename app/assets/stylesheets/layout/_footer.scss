@@ -34,32 +34,14 @@
 .text-left .list-inline {
   margin-left: 0.5vh;
 }
-// #footer .text-left {
-//     position: absolute;
-//     left: 20px;
-//     top: -5px;
-//     .list-inline {
-//       position: absolute;
-//       left: 5px;
-//       bottom: -25px;
-//     }
-//     a {
-//       letter-spacing: 0px;
-//       font-size: 11px;
-//       // font-height: 14px;
-//       text-decoration: underline;
-//       color: #D6D6D6;
-//       transition: color 0.5s ease;
-//       &:hover {
-//         color: #F9F9F9;
-//       }
-//     }
-//   }
-//   .icons-right {
-//     position: absolute;
-//     right: 20px;
-//     top: 15px;
-//   }
+
+.text-right {
+  margin-right: 15vh;
+  margin-top: -1vh;
+  a {
+    letter-spacing: 20px
+  }
+}
 
 #footer p {
   color: white;
