@@ -1,0 +1,34 @@
+.style {
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+}
+
+.container-logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-1, .container-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.design-bar, .design-bar-2, .design-bar-3 {
+  width: 100%
+}
+.active {
+  border: 4px solid $celadon;
+}
+.inactive {
+  border: 4px solid $lightgreen;
+}
+
+.display p {
+  color: $celadon
+}
+
+.text-bar-2.pastel p, .text-bar-3.pastel p {
+  color: $lightgreen
+}
+
+

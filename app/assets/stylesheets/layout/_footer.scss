@@ -21,8 +21,8 @@
     }
     a {
       letter-spacing: 0px;
-      font-size: 12px;
-      font-height: 14px;
+      font-size: 11px;
+      // font-height: 14px;
       text-decoration: underline;
       color: #D6D6D6;
       transition: color 0.5s ease;
@@ -41,6 +41,7 @@
 #footer p {
   color: white;
   font-size: 12px;
+  text-decoration: none;
 }
 #footer h3 {
   font-size: 16px;
@@ -54,6 +55,7 @@
 
 #footer a {
   color: #D6D6D6;
+  text-decoration: none;
   font-size: 20px;
   letter-spacing: 20px;
   transition: color 0.5s ease;

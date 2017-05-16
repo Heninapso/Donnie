@@ -1,10 +1,12 @@
 <div id="footer">
   <div class="text-left">
-    <h3><span class="donnie">Donnie!</span> - Les RH à qui vous pouvez tout dire</h3>
+    <h3><span class="donnie">Donnie!</span> - Redevenez heureux de travailler</h3>
 <!--     <p>Les RH à qui vous pouvez tout dire</p> -->
     <div class="list-inline">
     <a href="">Mentions légales</a>
-    <a href="">Contact / Presse</a>
+    <%= mail_to "annesophie.chambon@donnie.fr" do %>
+          Contact :<span>annesophie.chambon@donnie.fr</span>
+    <% end %>
     </div>
   </div>
   <div class="icons-right">

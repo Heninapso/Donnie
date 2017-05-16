@@ -82,3 +82,11 @@ p {
 .hidden {
   display: none;
 }
+
+.mail-address {
+  color: $mediumaqua;
+  &:hover {
+    color: $keppel;
+    text-decoration: underline
+  }
+}

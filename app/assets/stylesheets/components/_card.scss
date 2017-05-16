@@ -76,7 +76,11 @@
 .card-title {
   font-size: 18px;
   font-weight: bolder;
-  text-shadow: 2px 1px solid #999999
+  text-shadow: 2px 1px solid #999999;
+}
+
+.card-section .italic {
+  font-style: italic
 }
 
 .card-price {
@@ -97,22 +101,31 @@
 
 .card-button-bottom-left {
   position: absolute;
-  left: 50px;
+  left: 40px;
   bottom: 10px;
   color: white;
   cursor: pointer;
+  width: 12vh;
+  p {
+    position: absolute;
+    bottom: -4px;
+    left: 22px;
+  }
 }
 
 .card-icon {
   position: absolute;
   bottom: 10px;
-  right: 10px;
   text-decoration: none;
   color:white;
 }
+.hrservices-home .card-icon {
+  left: 20px;
+}
+
 
 .card-table {
-  background-color: #ecf5ef;
+  background-color: $lightgreen;
   height: 200px;
   background-size: cover !important;
   color: $pgray;
@@ -122,7 +135,7 @@
   border-radius: 3px;
   box-shadow: 2px solid #CCCCCC;
   &:hover {
-    background-color: $lightgreen
+    border: 2px solid $keppel
   }
 }
 

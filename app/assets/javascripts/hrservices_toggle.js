@@ -3,6 +3,6 @@ $(document).ready(function() {
     console.log('.card-button-bottom-left');
     $('html, body').animate({
         scrollTop: $("#detail").offset().top
-      }, 2000);
+      }, 1000);
   });
 });

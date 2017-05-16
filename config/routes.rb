@@ -11,25 +11,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :messages, only: [:new, :create]
 
+  resources :orders, only: [:show, :create] do
+    resources :payment, only: [:new, :create]
+  end
+
+
 end
 
 
-  # get 'meetings/index'
-
-  # get 'meetings/show'
-
-  # get 'meetings/new'
-
-  # get 'meetings/create'
-
-  # get 'meetings/edit'
-
-  # get 'meetings/update'
-
-  # get 'meetings/destroy'
-
-  # get 'hrservices/index'
-
-  # get 'user/new'
-
-  # get 'user/create'
