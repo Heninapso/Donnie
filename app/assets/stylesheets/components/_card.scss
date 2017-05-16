@@ -17,7 +17,9 @@
   height: 100vh;
 }
 .values {
-  height:40vh
+  height:40vh;
+  display: flex;
+  justify-content: center;
 }
 
 .medium {
@@ -41,9 +43,9 @@
 .card-description {
   position: absolute;
   // bottom: 10px;
-  left: 10px;
+  // left: 10px;
   top: -8px;
-  padding-right: 2px
+  // padding-right: 2px
 }
 .card-description h3 {
   font-size: 20px;
@@ -126,7 +128,7 @@
 
 .card-table {
   background-color: $lightgreen;
-  // height: 200px;
+  height: 200px;
   background-size: cover !important;
   color: $pgray;
   position: relative;
