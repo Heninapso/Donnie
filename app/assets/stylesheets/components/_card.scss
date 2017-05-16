@@ -1,6 +1,6 @@
 .card {
   background-color: $mediumaqua;
-  height: 25vh;
+  height: 30vh;
   background-size: cover !important;
   color: white;
   position: relative;
@@ -17,7 +17,7 @@
   height: 100vh;
 }
 .values {
-  height:28vh
+  height:40vh
 }
 
 .medium {
@@ -126,7 +126,7 @@
 
 .card-table {
   background-color: $lightgreen;
-  height: 200px;
+  // height: 200px;
   background-size: cover !important;
   color: $pgray;
   position: relative;
