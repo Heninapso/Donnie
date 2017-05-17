@@ -126,29 +126,30 @@
 
 <div class="hrservices" id="detail">
   <h3 class= "text-center title">Les prestations de <span class="donnie">Donnie!</span> en détail</h3>
+  <span class="hidden-xs hidden-sm">
     <div class="row">
       <div class="headers text-center">
-        <div class="col-xs-2 col-md-2"></div>
+        <!-- <div class="col-xs-2 col-md-2"></div> -->
         <div class="col-xs-3 col-md-3 header-item">Description</div>
-        <div class="col-xs-4 col-md-4 header-item">Modalités</div>
-        <div class="col-xs-3 col-md-3 header-item">Prix</div>
+        <div class="col-xs-5 col-md-5 header-item">Modalités</div>
+        <div class="col-xs-4 col-md-4 header-item">Prix</div>
       </div>
     </div>
     <% @hrservices.each do |hrservice| %>
-    <div class="row">
-      <!-- <div class="table-contents"> -->
+      <div class="row">
         <div class="card-table">
-          <div class="col-xs-2 col-md-2 row-title vertical-align bold"><%= hrservice.title %></div>
-          <div class="col-xs-3 col-md-3 row-title vertical-align"><%= hrservice.description %></div>
-          <div class="col-xs-4 col-md-4 row-item vertical-align">
+          <div class="col-xs-3 col-md-3 row-title vertical-align">
+            <h4><%= hrservice.title %></h4>
+            <p><%= hrservice.description %></p>
+          </div>
+          <div class="col-xs-5 col-md-5 row-item vertical-align">
             <% hrservice.conditions.each do |condition| %>
               <div class="ul-no-bullets">
                 <li><%= condition %></li>
               </div>
-              </ul>
             <% end %>
           </div>
-          <div class="col-xs-3 col-md-3 row-item vertical-align">
+          <div class="col-xs-4 col-md-4 row-item vertical-align">
             <div class="ul-no-bullets text-center">
               <% if hrservice.title == "Je crois qu'il y a un loup dans ma bergerie, j'ai besoin d'aide" %>
                 <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</li>
@@ -166,7 +167,58 @@
           </div>
         </div>
       </div>
-  <% end %>
+    <% end %>
+  </span>
+  <span class="visible-xs visible-sm">
+    <div class="row">
+      <div class="headers text-center">
+        <div class="col-xs-8 header-item">Description / Modalités</div>
+        <div class="col-xs-4 header-item">Prix / Options</div>
+      </div>
+    </div>
+    <% @hrservices.each do |hrservice| %>
+      <div class="card-table mobile">
+        <div class="row">
+          <div class="col-xs-8 row-item">
+            <h4><%= hrservice.title %></h4>
+            <p><%= hrservice.description %></p>
+          </div>
+          <div class="col-xs-4 row-item">
+            <div class="ul-no-bullets text-center">
+              <p class="text-center">Prix : </p>
+              <% if hrservice.title == "Je crois qu'il y a un loup dans ma bergerie, j'ai besoin d'aide" %>
+                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</li>
+              <% else %>
+                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 row-item">
+            <p class="text-center">Modalités :</p>
+            <% hrservice.conditions.each do |condition| %>
+              <div class="ul-no-bullets">
+                <li><%= condition %></li>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-xs-4 row-item">
+            <div class="ul-no-bullets text-center">
+              <% if hrservice.options? %>
+                <p class="text-center">Options :</p>
+                <%= hrservice.options %></li>
+              <% end %>
+              <%= form_tag orders_path do %>
+                <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+                <%= submit_tag 'Acheter', class: "btn-small"  %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </span>
 </div>
 
 <div class="hrservices">
