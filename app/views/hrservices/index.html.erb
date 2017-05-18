@@ -170,45 +170,51 @@
     <% end %>
   </span>
   <span class="visible-xs visible-sm">
-    <div class="row">
-      <div class="headers text-center">
-        <div class="col-xs-8 header-item">Description / Modalités</div>
-        <div class="col-xs-4 header-item">Prix / Options</div>
-      </div>
-    </div>
     <% @hrservices.each do |hrservice| %>
       <div class="card-table mobile">
         <div class="row">
-          <div class="col-xs-8 row-item">
-            <h4><%= hrservice.title %></h4>
-            <p><%= hrservice.description %></p>
+          <div class="col-xs-10 row-item">
+            <h4 class="h4-mobile"><%= hrservice.title %></h4>
           </div>
-          <div class="col-xs-4 row-item">
+          <div class="col-xs-2 row-item">
             <div class="ul-no-bullets text-center">
-              <p class="text-center">Prix : </p>
+              <!-- <p class="text-center">Prix : </p> -->
               <% if hrservice.title == "Je crois qu'il y a un loup dans ma bergerie, j'ai besoin d'aide" %>
-                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</li>
+                <li class="price margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %>€ /heure</li>
               <% else %>
-                <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
+                <li class="price margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %>€</li>
               <% end %>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-8 row-item">
-            <p class="text-center">Modalités :</p>
+          <div class="col-xs-12">
+            <p class="description"><%= hrservice.description %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 row-item">
+            <p class="bold">Modalités :</p>
             <% hrservice.conditions.each do |condition| %>
               <div class="ul-no-bullets">
                 <li><%= condition %></li>
               </div>
             <% end %>
           </div>
-          <div class="col-xs-4 row-item">
-            <div class="ul-no-bullets text-center">
-              <% if hrservice.options? %>
-                <p class="text-center">Options :</p>
-                <%= hrservice.options %></li>
-              <% end %>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 row-item">
+            <% if hrservice.options? %>
+              <p class="bold">Options :</p>
+              <div class="ul-no-bullets ">
+                <li><%= hrservice.options %></li>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="text-center">
               <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'hrservice_id', hrservice.id %>
                 <%= submit_tag 'Acheter', class: "btn-small"  %>
