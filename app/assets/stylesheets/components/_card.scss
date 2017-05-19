@@ -17,7 +17,7 @@
   height: 100vh;
 }
 .values {
-  height:40vh;
+  height:28vh;
   display: flex;
   justify-content: center;
 }
@@ -26,6 +26,12 @@
   height: 40vh;
 }
 
+.mobile {
+  height: 40vh;
+  p {
+    font-size: 14px
+  }
+}
 .hrservices-home {
   display: flex;
   align-items: center;
@@ -58,9 +64,8 @@
 }
 
 .card-content ul {
-  font-size: 14px;
-  margin-left: -20px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 13px;
 }
 .card-content-no-js p {
   color: white
@@ -155,7 +160,4 @@
   }
 }
 
-.mobile {
-  height: 60vh
-}
 
