@@ -1,6 +1,6 @@
 .card {
   background-color: $mediumaqua;
-  height: 25vh;
+  height: 30vh;
   background-size: cover !important;
   color: white;
   position: relative;
@@ -9,7 +9,7 @@
   border-radius: 3px;
   box-shadow: 2px solid #CCCCCC;
   p {
-    color: white
+    color: white;
   }
 }
 
@@ -17,7 +17,9 @@
   height: 100vh;
 }
 .values {
-  height:28vh
+  height:40vh;
+  display: flex;
+  justify-content: center;
 }
 
 .medium {
@@ -41,9 +43,9 @@
 .card-description {
   position: absolute;
   // bottom: 10px;
-  left: 10px;
+  // left: 10px;
   top: -8px;
-  padding-right: 2px
+  // padding-right: 2px
 }
 .card-description h3 {
   font-size: 20px;
@@ -77,12 +79,24 @@
   font-size: 18px;
   font-weight: bolder;
   text-shadow: 2px 1px solid #999999;
+  margin-bottom: 10px
 }
+
+
 
 .card-section .italic {
   font-style: italic
 }
 
+.card-section {
+  ul {
+    font-size: 14px
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}
 .card-price {
   position: absolute;
   right: 15px;
@@ -110,12 +124,14 @@
     position: absolute;
     bottom: -4px;
     left: 22px;
+  } p, i {
+    font-size: 14px;
   }
 }
 
 .card-icon {
   position: absolute;
-  bottom: 10px;
+  bottom: 13px;
   text-decoration: none;
   color:white;
 }
@@ -139,7 +155,7 @@
   }
 }
 
-
-
-
+.mobile {
+  height: 60vh
+}
 

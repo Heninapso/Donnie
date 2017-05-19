@@ -1,21 +1,29 @@
 <div id="footer">
-  <div class="text-left">
-    <h3><span class="donnie">Donnie!</span> - Redevenez heureux de travailler</h3>
-<!--     <p>Les RH à qui vous pouvez tout dire</p> -->
-    <div class="list-inline">
-    <a href="">Mentions légales</a>
-    <%= mail_to "annesophie.chambon@donnie.fr" do %>
-          Contact :<span>annesophie.chambon@donnie.fr</span>
-    <% end %>
+  <span class="footer-width">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="text-left">
+          <h3><span class="donnie">Donnie!</span> - Redevenez heureux de travailler</h3>
+      <!--     <p>Les RH à qui vous pouvez tout dire</p> -->
+          <div class="list-inline">
+          <a href=""><span class="underscore">Mentions légales</span> / </a>
+          <%= mail_to "annesophie.chambon@donnie.fr" do %>
+                Contact : <span class="underscore">annesophie.chambon@donnie.fr</span>
+          <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="text-right">
+          <h3>Retrouvez Donnie (et Anne-Sophie) sur les réseaux sociaux</h3>
+          <div class="list-inline">
+            <a target="_blank" href="https://twitter.com/Ann3sophie"><i class="fa fa-twitter"></i></a>
+            <a target="_blank" href="https://medium.com/@anneso_chambon"><i class="fa fa-medium"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/anne-sophie-chambon-920a1637/"><i class="fa fa-linkedin"></i></a>
+            <a target="_blank" href="https://www.instagram.com/donnie_the_mischievous_sheep/"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="icons-right">
-    <p>Retrouvez Donnie (et Anne-Sophie) sur les réseaux sociaux</p>
-    <div class="list-inline">
-      <a target="_blank" href="https://twitter.com/Ann3sophie"><i class="fa fa-twitter"></i></a>
-      <a target="_blank" href="https://medium.com/@anneso_chambon"><i class="fa fa-medium"></i></a>
-      <a target="_blank" href="https://www.linkedin.com/in/anne-sophie-chambon-920a1637/"><i class="fa fa-linkedin"></i></a>
-      <a target="_blank" href="https://www.instagram.com/donnie_the_mischievous_sheep/"><i class="fa fa-instagram"></i></a>
-    </div>
-  </div>
+  </span>
 </div>
