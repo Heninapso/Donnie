@@ -8,7 +8,6 @@
   width:100%;
   background: rgba(74,73,74,0.77);
   padding: 10px 0 25px 0;
-  color: white;
   bottom:0;
 }
 
@@ -19,7 +18,9 @@
 .text-left {
   margin-left: 1vh;
   margin-top: -1vh;
+  color: white;
   a {
+    cursor: pointer;
     letter-spacing: 0px;
     font-size: 11px;
     text-decoration: underline;
@@ -38,13 +39,14 @@
 .text-right {
   margin-right: 15vh;
   margin-top: -1vh;
-  a {
+  h3 {
+    color: white;
+  } a {
     letter-spacing: 15px
   }
 }
 
 #footer p {
-  color: white;
   font-size: 11px;
   text-decoration: none;
 }
