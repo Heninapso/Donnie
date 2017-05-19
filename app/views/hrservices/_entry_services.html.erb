@@ -1,0 +1,31 @@
+
+<% @hrservices.each do |hrservice| %>
+  <% if hrservice.entry_service? %>
+    <div class="col-xs-12">
+      <div class="card large">
+        <div class="card-section">
+          <div class="card-title"><%= hrservice.title %></div>
+          <p><%= hrservice.description %></p>
+          <% hrservice.conditions.each do |condition| %>
+            <ul><%= condition %></ul>
+          <% end %>
+          <div class="card-button-bottom-left">
+            <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+            <p>de détails</p>
+          </div>
+          <% if hrservice.title == "Feedback CV/lettre de motivation" %>
+            <div class="card-price">Prix par service (CV ou lettre): <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+          <% else %>
+            <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+          <% end %>
+          <!-- TO DO > link_to paiement / stripe -->
+          <div class="card-button-bottom-right">
+            <%= form_tag orders_path do %>
+              <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+              <%= submit_tag 'Acheter', class: "btn-small" %>
+            <% end %>
+          </div>
+        </div>
+        </div>
+  <% end %>
+<% end %>
