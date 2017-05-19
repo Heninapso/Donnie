@@ -6,7 +6,8 @@
           <h3><span class="donnie">Donnie!</span> - Redevenez heureux de travailler</h3>
       <!--     <p>Les RH à qui vous pouvez tout dire</p> -->
           <div class="list-inline">
-          <a href=""><span class="underscore">Mentions légales</span> / </a>
+          <a><span class="underscore" data-toggle="modal" data-target="#cgv">Mentions légales</span>
+          <%= render 'cgv' %>/ </a>
           <%= mail_to "annesophie.chambon@donnie.fr" do %>
                 Contact : <span class="underscore">annesophie.chambon@donnie.fr</span>
           <% end %>
