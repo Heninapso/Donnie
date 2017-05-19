@@ -15,7 +15,7 @@
           <div class="card medium">
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
-              <%= hrservice.description %>
+              <p><%= hrservice.description %><p>
               <% hrservice.conditions.each do |condition| %>
                 <ul><%= condition %></ul>
               <% end %>
@@ -56,7 +56,7 @@
                 <ul><%= condition %></ul>
               <% end %>
               <% if hrservice.options? %>
-                <p>Options : <%= hrservice.options %></p>
+                <p class="sml italic">Options : <%= hrservice.options %></p>
               <% end %>
               <div class="card-button-bottom-left">
                 <i class="fa fa-plus card-icon" aria-hidden="true"></i>
@@ -81,7 +81,7 @@
     <% @hrservices.each do |hrservice| %>
       <div class="col-xs-12 col-md-10 col-md-offset-1">
         <% if hrservice.ondemand_service? %>
-          <div class="card">
+          <div class="card medium">
             <div class="card-section">
               <div class="card-title"><%= hrservice.title %></div>
               <%= hrservice.description %>
