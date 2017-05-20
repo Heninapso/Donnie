@@ -17,13 +17,17 @@
   height: 100vh;
 }
 .values {
-  height:28vh;
+  height:30vh;
   display: flex;
   justify-content: center;
 }
 
 .medium {
   height: 40vh;
+}
+
+.smart {
+  height: 45vh !important;
 }
 
 .mobile .card-section {
@@ -39,6 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 35vh
 }
 
 .bio-card {
@@ -50,14 +55,22 @@
 }
 
 .card-description {
-  position: absolute;
-  // bottom: 10px;
-  // left: 10px;
-  top: -8px;
-  // padding-right: 2px
+  margin-top: -4vh;
 }
+
+.card-description-values {
+  margin-top: 20px;
+  h3 {
+    font-size: 20px;
+    margin-top: -20px;
+  } p {
+    font-size: 14px
+  }
+}
+
 .card-description h3 {
   font-size: 20px;
+  margin-top: -20px;
 }
 .card-description p {
   font-size: 14px;
@@ -69,6 +82,7 @@
 .card-content ul {
   font-size: 13px;
   line-height: 13px;
+  margin-left: 0px
 }
 .card-content-no-js p {
   color: white

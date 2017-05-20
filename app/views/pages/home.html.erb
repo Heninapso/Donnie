@@ -21,33 +21,27 @@
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <div class="card hrservices-home">
-        <%= link_to hrservices_path do %>
-          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-        <% end %>
-        <div class="card-image">
-          <%= image_tag 'Talk.png' %>
-        </div>
         <div class="card-description">
-          <h3>Mieux mettre en avant qui vous êtes et ce que vous savez faire</h3>
+          <h3 class="text-center">Mieux mettre en avant qui vous êtes et ce que vous savez faire</h3>
           <div class="card-content hidden">
             <p><span class="donnie">Donnie!</span> vous aide à</p>
             <ul>- identifier vos compétences</ul>
             <ul>- faire le point sur votre CV</ul>
             <ul>- avoir un retour objectif et professionnel sur l'image que vous renvoyez à des recruteurs</ul>
           </div>
+          <div class="card-image">
+            <%= image_tag 'Talk.png' %>
+          </div>
         </div>
+        <%= link_to hrservices_path do %>
+          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+        <% end %>
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
       <div class="card hrservices-home">
-        <%= link_to hrservices_path do %>
-          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-        <% end %>
-        <div class="card-image">
-          <%= image_tag 'CV.png'%>
-        </div>
         <div class="card-description">
-          <h3>Mieux comprendre les recruteurs</h3>
+          <h3 class="text-center">Mieux comprendre les recruteurs</h3>
           <div class="card-content hidden">
             <p><span class="donnie">Donnie!</span> travaille avec vous pour</p>
             <ul>- décrypter les processus et les attentes des recruteurs</ul>
@@ -55,25 +49,31 @@
             <ul>- redonner un coup de jeune à votre CV</ul>
             <ul>- préparer vos entretiens de recrutement</ul>
           </div>
+          <div class="card-image">
+            <%= image_tag 'CV.png'%>
+          </div>
         </div>
+        <%= link_to hrservices_path do %>
+          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+        <% end %>
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
       <div class="card hrservices-home">
-        <%= link_to hrservices_path do %>
-          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-        <% end %>
-        <div class="card-image">
-          <%= image_tag 'Exchange.png' %>
-        </div>
         <div class="card-description">
-          <h3>Trouver des réponses à vos questionnements RH</h3>
+          <h3 class="text-center">Trouver des réponses à vos questionnements RH</h3>
           <div class="card-content hidden">
             <p><span class="donnie">Donnie!</span> fait aussi du sur-mesure, vous écoute et vous conseille</p>
             <ul>- sur les aspects pratiques RH du quotidien</ul>
             <ul>- dans les situations plus complexes (rupture de contrat, pré-contentieux, situations professionnelles complexes)</ul>
           </div>
+          <div class="card-image">
+            <%= image_tag 'Exchange.png' %>
+          </div>
         </div>
+        <%= link_to hrservices_path do %>
+          <i class="fa fa-plus card-icon" aria-hidden="true"></i>
+        <% end %>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-3">
       <div class="card values">
-        <div class="card-description">
+        <div class="card-description-values">
           <h3 class="text-center">Confidentialité</h3>
           <p>Aucun tabou dans les échanges. Toutes les informations sont confidentielles chez <span class="donnie">Donnie!</span> Tout ce que vous nous direz ne pourra JAMAIS être retenu contre vous.</p>
         </div>
@@ -95,7 +95,7 @@
     </div>
     <div class="col-xs-12 col-md-3">
       <div class="card values">
-        <div class="card-description">
+        <div class="card-description-values">
           <h3 class="text-center">Au service des individus, pas des entreprises</h3>
           <p><span class="donnie">Donnie!</span> est un service indépendant, qui vous permet d'obtenir une réponse objective et professionnelle à vos questions. Nous ne fournissons aucun service à des entreprises, donc pas de conflit d'intérêt quand il s'agit de vous conseiller.</p>
         </div>
@@ -103,7 +103,7 @@
     </div>
     <div class="col-xs-12 col-md-3">
       <div class="card values">
-        <div class="card-description">
+        <div class="card-description-values">
           <h3 class="text-center">Bienveillant</h3>
           <p>Chez <span class="donnie">Donnie!</span>, on vous écoute vraiment, sans jugement subjectif, pour vous aider à trouver une solution à vos interrogations. Chacun a des compétences, des talents (parfois cachés), nous sommes là pour vous aider à les identifier et les mettre en avant.</p>
         </div>
@@ -111,7 +111,7 @@
     </div>
     <div class="col-xs-12 col-md-3">
       <div class="card values">
-        <div class="card-description">
+        <div class="card-description-values">
           <h3 class="text-center">Sérieux sans se prendre au sérieux</h3>
           <p>Certes nous sommes optimistes et nous aimons les moutons, mais <span class="donnie">Donnie!</span>, c'est aussi le gage d'un conseil professionnel sur des questions qui sont importantes et critiques pour vous.</p>
         </div>
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="visible-sm visible-xs">
-        <div class="card mobile">
+        <div class="card smart">
           <%= render 'testimony'%>
         </div>
       </div>
