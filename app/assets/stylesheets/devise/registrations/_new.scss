@@ -1,23 +1,24 @@
 .simple_form {
   line-height: 1.2;
 }
-.registration {
+.signup {
   background-color: $lightgreen;
   padding: 10px 20px 50px 20px;
   h2 {
     text-align: center;
-    padding: 20px
+    padding: 20px;
+    margin-top: 40px;
   }
 }
 
 .slogan {
   font-family: Indie Flower
 }
-.container {
+.container-form {
+  padding: 1vh;
   background-color: white;
   border-radius: 3px;
   box-shadow: 2px 2px solid #999999;
-  width: 400px;
   .form-inputs {
     margin: 15px;
     padding: 5px;
@@ -35,8 +36,27 @@
   }
 }
 
+.form-actions {
+  display: flex;
+  justify-content: center;
+  .btn {
+  width: 100%;
+  margin-bottom: 15px;
+  }
+}
+
+.form-actions-mobile {
+  display: flex;
+  justify-content: center;
+  .btn {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px
+  }
+}
 
 .sign-in {
+  background-color: white;
   padding: 15px;
   text-align: center;
   p {
