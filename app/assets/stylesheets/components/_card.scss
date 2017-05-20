@@ -17,13 +17,22 @@
   height: 100vh;
 }
 .values {
-  height:40vh;
+  height:28vh;
   display: flex;
   justify-content: center;
 }
 
 .medium {
   height: 40vh;
+}
+
+.mobile .card-section {
+    font-size: 13px;
+  ul {
+    font-size: 13px !important;
+    line-height: 14px;
+    margin-left: -30px
+  }
 }
 
 .hrservices-home {
@@ -58,9 +67,8 @@
 }
 
 .card-content ul {
-  font-size: 14px;
-  margin-left: -20px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 13px;
 }
 .card-content-no-js p {
   color: white
@@ -82,6 +90,9 @@
   margin-bottom: 10px
 }
 
+.title-mobile {
+  font-size:16px
+}
 
 
 .card-section .italic {
@@ -129,6 +140,13 @@
   }
 }
 
+.bottom-left-mobile {
+  left: 20px;
+  bottom: 2px;
+  p, i {
+    font-size: 12px;
+  }
+}
 .card-icon {
   position: absolute;
   bottom: 13px;
@@ -155,7 +173,16 @@
   }
 }
 
-.mobile {
-  height: 60vh
+.card-table-mobile {
+  background-color: $lightgreen;
+  background-size: cover !important;
+  color: $pgray;
+  position: relative;
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 2px solid #CCCCCC;
+  &:hover {
+    border: 2px solid $keppel
+  }
 }
-

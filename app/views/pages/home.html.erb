@@ -85,7 +85,7 @@
 <div class="cards">
   <h3 class="title-home">Les valeurs de <span class="donnie">Donnie!</span></h3>
   <div class="row">
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <div class="card values">
         <div class="card-description">
           <h3 class="text-center">Confidentialité</h3>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <div class="card values">
         <div class="card-description">
           <h3 class="text-center">Au service des individus, pas des entreprises</h3>
@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <div class="card values">
         <div class="card-description">
           <h3 class="text-center">Bienveillant</h3>
@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <div class="card values">
         <div class="card-description">
           <h3 class="text-center">Sérieux sans se prendre au sérieux</h3>
@@ -144,18 +144,16 @@
   <h3 class= "text-center">Ce qu'on pense de nous </h3>
   <div class="row">
     <div class="col-xs-12 col-md-4 col-md-offset-4">
-      <div class="card">
-        <div class="card-testimony">
-          <p>"Au delà du changement de CV, c’est avant tout moi qui suis différente. Je viens de passer mon premier entretien avec le nouveau CV. J’étais sereine, j’avais confiance en moi, dans mes ressources. Pas arrogante, juste fière de ce que j’ai fait et confiante pour la suite! "  --  Muriel</p>
+      <div class="hidden-xs hidden-sm">
+        <div class="card">
+          <%= render 'testimony' %>
         </div>
-        <div class="card-notice">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn-light" data-toggle="modal" data-target="#myModal">Lire le témoignage</button>
+      </div>
+      <div class="visible-sm-visible-xs">
+        <div class="card mobile">
+          <%= render 'testimony'%>
         </div>
-
-        <!-- Modal -->
-        <%= render 'modal' %>
-
+      </div>
       </div>
     </div>
   </div>

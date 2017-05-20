@@ -34,6 +34,9 @@
 
 .text-left .list-inline {
   margin-left: 0.5vh;
+  .fa {
+    letter-spacing: 15px
+  }
 }
 
 .text-right {
@@ -53,12 +56,8 @@
 #footer h3 {
   font-size: 16px;
   margin-top: 20px !important;
+  margin-bottom: 0px !important;
 }
-
-// #footer .list-inline {
-//   position: absolute;
-//   right: -20px;
-// }
 
 #footer a {
   color: #D6D6D6;
