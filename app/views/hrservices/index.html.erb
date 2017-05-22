@@ -157,6 +157,11 @@
                 <% hrservice.conditions.each do |condition| %>
                   <ul><%= condition %></ul>
                 <% end %>
+                <% if hrservice.options? %>
+                  <div class="options">
+                    <p class="sml italic">Option : <%= hrservice.options %></p>
+                  </div>
+                <% end %>
                 <div class="card-button-bottom-left">
                   <i class="fa fa-plus card-icon" aria-hidden="true"></i>
                   <p>de détails</p>
