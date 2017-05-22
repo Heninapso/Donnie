@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :payment, only: [:new, :create]
   end
 
+  get '/robots.:format' => 'pages#robots'
 
 end
 
