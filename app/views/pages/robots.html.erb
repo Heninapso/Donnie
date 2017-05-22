@@ -1,0 +1,9 @@
+<% if Rails.env.production? %>
+  User-Agent: *
+  Allow: /
+  Disallow: /users/, /password/
+  Sitemap: http://www.donnie.fr/sitemap.xml
+<% else %>
+  User-Agent: *
+  Disallow: /
+<% end %>
