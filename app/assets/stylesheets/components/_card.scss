@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh
+  height: 54vh
 }
 
 .bio-card {
@@ -55,11 +55,13 @@
 }
 
 .card-description {
-  margin-top: -4vh;
+  margin-top: -5vh;
+  position: absolute;
+  top: 45px;
 }
 
 .card-description-values {
-  margin-top: 20px;
+  margin-top: 19px;
   h3 {
     font-size: 20px;
     margin-top: -20px;
@@ -70,18 +72,21 @@
 
 .card-description h3 {
   font-size: 20px;
-  margin-top: -20px;
 }
 .card-description p {
   font-size: 14px;
 }
-.card-content p {
+.card-content {
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  p {
   color: white
+  }
 }
 
 .card-content ul {
-  font-size: 13px;
-  line-height: 13px;
+  font-size: 14px;
+  line-height: 14px;
   margin-left: 0px
 }
 .card-content-no-js p {
