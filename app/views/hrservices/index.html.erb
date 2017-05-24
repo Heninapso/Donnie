@@ -24,13 +24,17 @@
                   <ul><%= condition %></ul>
                 <% end %>
                 <div class="card-button-bottom-left">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
                 <% if hrservice.title == "Feedback CV/lettre de motivation" %>
-                  <div class="card-price">Prix par service (CV ou lettre): <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+                  <div class="card-price">
+                    <p class="bold">Prix par service (CV ou lettre) : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
+                    </div>
                 <% else %>
-                  <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
+                  <div class="card-price">
+                    <p class="bold">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
+                  </div>
                 <% end %>
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
@@ -53,8 +57,8 @@
                   <ul><%= condition %></ul>
                 <% end %>
                 <div class="card-button-bottom-left bottom-left-mobile">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
                 <% if hrservice.title == "Feedback CV/lettre de motivation" %>
                   <div class="card-price">Prix par service : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
@@ -91,20 +95,21 @@
                 <% hrservice.conditions.each do |condition| %>
                   <ul><%= condition %></ul>
                 <% end %>
-                <% if hrservice.options? %>
-                  <p class="sml italic">Options : <%= hrservice.options %></p>
-                <% end %>
-                <div class="card-button-bottom-left">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
-                </div>
-                <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
-                <!-- TO DO > link_to paiement / stripe -->
-                <div class="card-button-bottom-right">
+                <div class="price-section text-center">
+                  <p class="bold">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
                   <%= form_tag orders_path do %>
                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
+                    <%= submit_tag 'Acheter', class: "btn-light" %>
                   <% end %>
+                  <% if hrservice.options? %>
+                    <div class="options-section">
+                      <p class="sml italic">Options : <%= hrservice.options %></p>
+                    </div>
+                  <% end %>
+                </div>
+                <div class="card-button-bottom-left">
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
               </div>
             </div>
@@ -121,22 +126,23 @@
                 <% hrservice.conditions.each do |condition| %>
                   <ul><%= condition %></ul>
                 <% end %>
+                <div class="price-section-mobile text-center">
+                  <p>Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
+                  <%= form_tag orders_path do %>
+                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+                    <%= submit_tag 'Acheter', class: "btn-small" %>
+                  <% end %>
+                </div>
                 <% if hrservice.options? %>
                   <div class="options">
                     <p class="sml italic">Options : <%= hrservice.options %></p>
                   </div>
                 <% end %>
                 <div class="card-button-bottom-left bottom-left-mobile">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
-                <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</div>
-                <div class="card-button-bottom-right">
-                  <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
-                  <% end %>
-                </div>
+                <div class="card-price"></div>
               </div>
             </div>
           </div>
@@ -163,10 +169,12 @@
                   </div>
                 <% end %>
                 <div class="card-button-bottom-left">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
-                <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
+                <div class="card-price">
+                  <p class="bold">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</p>
+                </div>
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
                   <%= form_tag orders_path do %>
@@ -190,8 +198,8 @@
                   <ul><%= condition %></ul>
                 <% end %>
                 <div class="card-button-bottom-left bottom-left-mobile">
-                  <i class="fa fa-plus card-icon" aria-hidden="true"></i>
-                  <p>de détails</p>
+                  <i class="fa fa-arrow-down card-icon" aria-hidden="true"></i>
+                  <p>Tous les services</p>
                 </div>
                 <div class="card-price">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> € / heure</div>
                 <!-- TO DO > link_to paiement / stripe -->
