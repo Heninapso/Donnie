@@ -29,6 +29,11 @@
     &:hover {
       color: #F9F9F9;
     }
+  } .text-white {
+    margin-top: 5px;
+    color: #D6D6D6;
+  } .text-white-mobile {
+    color: #D6D6D6;
   }
 }
 
@@ -70,3 +75,6 @@
   }
 }
 
+#footer .text-white p {
+  color: #D6D6D6
+}
