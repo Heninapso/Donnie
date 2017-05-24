@@ -91,12 +91,27 @@
 }
 
 .options {
-  margin-top: 5vh;
+  margin-top: 4vh;
   p {
     font-size: 13px !important;
   }
 }
 
 #ask {
-  height: 50vh
+  height: 55vh
+}
+
+.price-section {
+  margin-top: 10vh;
+  p {
+  font-size: 17px
+  }
+}
+
+.options-section {
+  margin-top: 2vh
+}
+
+.price-section-mobile {
+  margin-top: 5vh
 }
