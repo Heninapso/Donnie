@@ -40,9 +40,9 @@
 }
 
 .hrservices-home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   height: 54vh
 }
 
@@ -54,10 +54,8 @@
   position: relative;
 }
 
-.card-description {
-  margin-top: -5vh;
-  position: absolute;
-  top: 45px;
+.hrservices-mobile {
+  margin-top: -4vh;
 }
 
 .card-description-values {
@@ -144,7 +142,7 @@
 }
 
 .card-button-bottom-left {
-  position: absolute;
+  // position: absolute;
   left: 40px;
   bottom: 5px;
   color: white;
