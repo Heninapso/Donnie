@@ -5,7 +5,7 @@
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/cookie-bar/1/cookiebar-latest.min.js?forceLang=fr&theme=grey&thirdparty=1&top=1&remember=30"></script>
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("donnie3.png")%>)">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path("donnie3-min.png")%>)">
   <div class="banner-content">
     <h1><%= image_tag "Donnie_V2.png", class: "donnie-logo text-center" %>Donnie!</h1>
     <p>Ne soyez plus un mouton<br>
@@ -26,7 +26,12 @@
     <div class="col-xs-12 col-md-4">
       <div class="card hrservices-home">
         <div class="card-description">
-          <h3 class="text-center">Mieux mettre en avant qui vous êtes et ce que vous savez faire</h3>
+          <div class="hidden-xs hidden-sm">
+            <h3 class="text-center">Mieux mettre en avant qui vous êtes et ce que vous savez faire</h3>
+          </div>
+          <div class="visible-xs visible-sm hrservices-mobile">
+            <h3 class="text-center">Mieux mettre en avant qui vous êtes et ce que vous savez faire</h3>
+          </div>
           <div class="card-content">
             <p><span class="donnie">Donnie!</span> vous aide à</p>
             <ul>- identifier vos compétences</ul>
@@ -169,7 +174,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-3 col-md-offset-1">
       <div class="picture-bio">
-        <%= image_tag('ASC.png', width: 200, height: 200, class: "imgbio") %>
+        <%= image_tag('ASC-min.png', width: 200, height: 200, class: "imgbio") %>
       </div>
     </div>
     <div class="col-xs-12 col-md-7">
