@@ -1,5 +1,5 @@
 $(document).ready (function () {
-  console.log('yoyo');
+  // console.log('yoyo');
   $('.datetimepick').datetimepicker({
     // inline: true,
     // sideBySide:true,
