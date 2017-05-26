@@ -151,7 +151,7 @@
   p {
     position: absolute;
     bottom: -4px;
-    left: 22px;
+    left: 35px;
   } p, i {
     font-size: 14px;
   }
@@ -185,6 +185,7 @@
   padding: 10px;
   border-radius: 3px;
   box-shadow: 2px solid #CCCCCC;
+  border: 2px solid $lightgreen;
   &:hover {
     border: 2px solid $keppel
   }

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // $('.card-content').addClass('hidden');
-  console.log('hello');
+  // console.log('hello');
   $('.card').mouseenter(function () {
     // $(this).find('.card-image').addClass('hidden');
     $(this).find('.card-content').removeClass('hidden');
