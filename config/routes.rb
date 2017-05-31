@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   get '/robots.:format' => 'pages#robots'
+  post 'check_coupon_code' => 'coupons#check_coupon_code'
 
 end
 
