@@ -58,10 +58,13 @@
 
         <!--#Coupon form begins -->
 
-              <%= form_tag check_coupon_code_path(remote: true) do %>
+              <%= form_tag check_coupon_code_order_path(@order, remote: true) do %>
                 <%= label_tag(:couponCode, 'Coupon:') %>
                 <%= text_field_tag(:couponCode) %>
                 <%= submit_tag 'Appliquer votre code promo', id: 'coupon-submit' %>
+                <% if flash[:alert] %>
+                  <div class="notice"><%= flash[:alert] %></div>
+                <% end %>
               <% end %>
 
               <!--#Coupon form ends -->
@@ -70,7 +73,7 @@
         <%= form_tag order_payment_index_path(@order) do %>
           <article>
             <label class="amount">
-              <p><span class="bold">Prix de la prestation : </span><%= humanized_money(@order.amount) %> €</p>
+              <p><span class="bold">Prix de la prestation : </span><span id="orderAmount"><%= humanized_money(@order.amount) %></span> €</p>
             </label>
           </article>
 

@@ -98,3 +98,12 @@ p {
 .modal-body p {
   color: $pgray;
 }
+
+.alert {
+  width: 100%;
+  background-color: $red;
+  p {
+    color: white;
+    font-weight: bold
+  }
+}

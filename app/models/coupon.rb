@@ -25,5 +25,6 @@ class Coupon < ApplicationRecord
   def self.normalize_code(code)
     code.gsub(/\s+/, '').upcase
   end
+
 end
 
