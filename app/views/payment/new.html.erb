@@ -58,13 +58,11 @@
 
         <!--#Coupon form begins -->
 
-              <%= form_tag check_coupon_code_order_path(@order, remote: true) do %>
+              <%= form_tag check_coupon_code_order_path(@order) do %>
                 <%= label_tag(:couponCode, 'Coupon:') %>
                 <%= text_field_tag(:couponCode) %>
                 <%= submit_tag 'Appliquer votre code promo', id: 'coupon-submit' %>
-                <% if flash[:alert] %>
-                  <div class="notice"><%= flash[:alert] %></div>
-                <% end %>
+
               <% end %>
 
               <!--#Coupon form ends -->

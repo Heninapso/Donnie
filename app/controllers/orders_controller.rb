@@ -24,16 +24,14 @@ class OrdersController < ApplicationController
         return
       else
         if @order.couponCode?
-          flash[:alert] = "Le code promo ne peut être utilisé qu'une seule fois."
+          flash[:alert] = "Déslolé, ce code promo ne peut être utilisé qu'une seule fois."
           redirect_to new_order_payment_path(@order)
         else
           discount = @order.amount * (@coupon_discount.discount_percent * 0.01)
           @final_price = @order.amount - discount
           @order.update(amount: @final_price, couponCode: @coupon)
+          redirect_to new_order_payment_path(@order)
         end
-        # respond_to do |format|
-        #   format.json { render json: @order, methods: [:apply_discount(order.amount)], only: [] }
-        # end
       end
     end
   end

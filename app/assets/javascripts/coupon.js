@@ -1,13 +1,16 @@
 $(document).ready(function () {
   $('#coupon-submit').on('click',function(e) {
+    if(("#couponCode")==='TEST' || ("#couponCode")==='test' || ("#couponCode")==='Test');
     // e.preventDefault()
-    var coupon = $('#couponCode').val();
-    console.log(coupon);
-    $.getJSON(window.location.href +"/check_coupon_code", {order: params[:order_id], coupon: coupon}, function(data) {
-      var newPrice = data.apply_discount($("#orderAmount").val());
-      console.log(newPrice);
-      $("#orderAmount").text = ("$" + data);
-    });
+    // var coupon = $('#couponCode').val();
+    var order_price = $("#orderAmount").text();
+    console.log(order_price);
+    var discount = order_price * 10%;
+    var new_price = (order_price-discount).toFixed(2);
+    console.log(new_price);
+    $("#orderAmount").text(new_price);
+    console.log(order_price);
+
   });
   // var coupon1 = $('.couponCode');
   // console.log(coupon1);
