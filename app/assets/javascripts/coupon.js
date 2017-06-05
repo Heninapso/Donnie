@@ -1,12 +1,16 @@
 $(document).ready(function () {
+  $('#codePromo').on('click', function () {
+    console.log('OK');
+    $('.codePromoForm').toggleClass('hidden');
+  });
   $('#coupon-submit').on('click',function(e) {
     if(("#couponCode")==='TEST' || ("#couponCode")==='test' || ("#couponCode")==='Test');
     // e.preventDefault()
     // var coupon = $('#couponCode').val();
     var order_price = $("#orderAmount").text();
     console.log(order_price);
-    var discount = order_price * 10%;
-    var new_price = (order_price-discount).toFixed(2);
+    var discount = (order_price * 0.1);
+    var new_price = (order_price - discount).toFixed(2);
     console.log(new_price);
     $("#orderAmount").text(new_price);
     console.log(order_price);
