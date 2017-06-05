@@ -68,12 +68,26 @@
   }
 }
 
+@media (max-width: 359px), (min-width: 300px) {
+.hrservices-home {
+  height: 90vh;
+}
+.values {
+  height: 47vh;
+}
+.smart {
+  height: 82vh !important;
+}
+}
+
 .card-description h3 {
   font-size: 20px;
 }
 .card-description p {
   font-size: 14px;
 }
+
+
 .card-content {
   margin-top: 4vh;
   margin-bottom: 2vh;
