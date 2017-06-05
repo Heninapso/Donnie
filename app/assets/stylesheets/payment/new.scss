@@ -8,8 +8,10 @@
 }
 
 
-#codePromo {
-
+#codePromo:hover {
+  // &:hover {
+    color: #282828;
+    text-decoration: none !important;
 }
 
 .start-service-notice {
