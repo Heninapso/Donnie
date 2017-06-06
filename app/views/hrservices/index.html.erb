@@ -39,7 +39,7 @@
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %> -->
                     <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
@@ -68,8 +68,8 @@
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                    <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
               </div>
@@ -98,8 +98,8 @@
                 <div class="price-section text-center">
                   <p class="bold">Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-light" %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                    <%= submit_tag 'Acheter', class: "btn-light" %>
                   <% end %>
                   <% if hrservice.options? %>
                     <div class="options-section">
@@ -129,8 +129,8 @@
                 <div class="price-section-mobile text-center">
                   <p>Prix : <%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                    <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
                 <% if hrservice.options? %>
@@ -178,8 +178,8 @@
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                    <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
               </div>
@@ -205,8 +205,8 @@
                 <!-- TO DO > link_to paiement / stripe -->
                 <div class="card-button-bottom-right">
                   <%= form_tag orders_path do %>
-                    <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                    <%= submit_tag 'Acheter', class: "btn-small" %>
+<!--                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                    <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
               </div>
@@ -270,8 +270,8 @@
                 <li class="margin">Options : <%= hrservice.options %></li>
               <% end %>
               <%= form_tag orders_path do %>
-                <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                <%= submit_tag 'Acheter', class: "btn-small"  %>
+<!--                 <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                <%= submit_tag 'Acheter', class: "btn-small"  %>
               <% end %>
             </div>
           </div>
@@ -326,8 +326,8 @@
           <div class="col-xs-12">
             <div class="text-center">
               <%= form_tag orders_path do %>
-                <%= hidden_field_tag 'hrservice_id', hrservice.id %>
-                <%= submit_tag 'Acheter', class: "btn-small"  %>
+<!--                 <%= hidden_field_tag 'hrservice_id', hrservice.id %>
+ -->                <%= submit_tag 'Acheter', class: "btn-small"  %>
               <% end %>
             </div>
           </div>
