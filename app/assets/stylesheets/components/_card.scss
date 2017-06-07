@@ -17,17 +17,12 @@
   height: 110vh;
 }
 .values {
-  height:30vh;
   display: flex;
   justify-content: center;
 }
 
 .medium {
   height: 40vh;
-}
-
-.smart {
-  height: 45vh !important;
 }
 
 .mobile .card-section {
@@ -37,13 +32,6 @@
     line-height: 14px;
     margin-left: -30px
   }
-}
-
-.hrservices-home {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  height: 54vh
 }
 
 .bio-card {
@@ -68,7 +56,8 @@
   }
 }
 
-@media (max-width: 359px), (min-width: 300px) {
+// start Media queries
+@media only screen and (min-device-width: 320px) {
 .hrservices-home {
   height: 90vh;
 }
@@ -76,17 +65,40 @@
   height: 47vh;
 }
 .smart {
-  height: 82vh !important;
+  height: 82vh;
 }
 }
 
-.card-description h3 {
+@media only screen and (min-device-width: 360px) {
+.hrservices-home {
+  height: 58vh;
+}
+.values {
+  height: 47vh;
+}
+.smart {
+  height: 55vh;
+}
+}
+
+@media only screen and (min-device-width: 768px) {
+.hrservices-home {
+  height: 48vh;
+}
+.values {
+  height: 30vh;
+}
+}
+
+// end media queries
+
+.card-description {
+  h3 {
   font-size: 20px;
-}
-.card-description p {
+  } p {
   font-size: 14px;
+  }
 }
-
 
 .card-content {
   margin-top: 4vh;
@@ -214,6 +226,7 @@
   padding: 10px;
   border-radius: 3px;
   box-shadow: 2px solid #CCCCCC;
+  border: 2px solid $lightgreen;
   &:hover {
     border: 2px solid $keppel
   }
