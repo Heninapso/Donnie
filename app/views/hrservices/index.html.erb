@@ -247,7 +247,7 @@
     </div>
     <% @hrservices.each do |hrservice| %>
       <div class="row">
-        <div class="card-table">
+        <div class="card-table with-height">
           <div class="col-md-3 row-title vertical-align">
             <h4><%= hrservice.title %></h4>
             <p><%= hrservice.description %></p>
@@ -281,7 +281,7 @@
   </span>
   <span class="visible-xs visible-sm">
     <% @hrservices.each do |hrservice| %>
-      <div class="card-table-mobile">
+      <div class="card-table">
         <div class="row">
           <div class="col-xs-10 row-item">
             <h4 class="h4-mobile"><%= hrservice.title %></h4>

@@ -13,49 +13,6 @@
   }
 }
 
-.large {
-  height: 110vh;
-}
-.values {
-  display: flex;
-  justify-content: center;
-}
-
-.medium {
-  height: 40vh;
-}
-
-.mobile .card-section {
-    font-size: 13px;
-  ul {
-    font-size: 13px !important;
-    line-height: 14px;
-    margin-left: -30px
-  }
-}
-
-.bio-card {
-  margin: 40px 10px 40px 10px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #F3FFE6;
-  position: relative;
-}
-
-.hrservices-mobile {
-  margin-top: -4vh;
-}
-
-.card-description-values {
-  margin-top: 19px;
-  h3 {
-    font-size: 20px;
-    margin-top: -20px;
-  } p {
-    font-size: 14px
-  }
-}
-
 // start Media queries
 @media only screen and (min-device-width: 320px) {
 .hrservices-home {
@@ -129,6 +86,42 @@
 }
 }
 // end media queries
+
+.values {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile .card-section {
+    font-size: 13px;
+  ul {
+    font-size: 13px !important;
+    line-height: 14px;
+    margin-left: -30px
+  }
+}
+
+.bio-card {
+  margin: 40px 10px 40px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #F3FFE6;
+  position: relative;
+}
+
+.hrservices-mobile {
+  margin-top: -4vh;
+}
+
+.card-description-values {
+  margin-top: 19px;
+  h3 {
+    font-size: 20px;
+    margin-top: -20px;
+  } p {
+    font-size: 14px
+  }
+}
 
 .card-description {
   h3 {
@@ -238,10 +231,8 @@
   left: 20px;
 }
 
-
 .card-table {
   background-color: $lightgreen;
-  height: 200px;
   background-size: cover !important;
   color: $pgray;
   position: relative;
@@ -254,18 +245,6 @@
     border: 2px solid $keppel
   }
 }
-
-.card-table-mobile {
-  background-color: $lightgreen;
-  background-size: cover !important;
-  color: $pgray;
-  position: relative;
-  margin: 10px 5px;
-  padding: 10px;
-  border-radius: 3px;
-  box-shadow: 2px solid #CCCCCC;
-  border: 2px solid $lightgreen;
-  &:hover {
-    border: 2px solid $keppel
-  }
+.with-height {
+  height: 200px
 }
