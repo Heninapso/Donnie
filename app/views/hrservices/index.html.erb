@@ -14,8 +14,8 @@
   <div class="row">
     <% @hrservices.each do |hrservice| %>
       <% if hrservice.entry_service? %>
-        <div class="hidden-xs hidden-sm">
-          <div class="col-md-6">
+        <div class="hidden-xs">
+          <div class="col-sm-6">
             <div class="card medium">
               <div class="card-section">
                 <div class="card-title"><%= hrservice.title %></div>
@@ -47,7 +47,7 @@
             </div>
           </div>
         </div>
-        <div class="visible-xs visible-sm">
+        <div class="visible-xs">
           <div class="col-xs-12">
             <div class="card medium mobile">
               <div class="card-section">
@@ -84,8 +84,8 @@
   <div class="row">
     <% @hrservices.each do |hrservice| %>
       <% if hrservice.hrsbundle? %>
-        <div class="hidden-xs hidden-sm">
-          <div class="col-md-3">
+        <div class="hidden-xs">
+          <div class="col-sm-6 col-md-3">
             <div class="card large">
               <div class="card-section">
                 <div class="card-title"><%= hrservice.title %></div>
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="visible-xs visible-sm">
+        <div class="visible-xs">
           <div class="col-xs-12">
             <div class="card large mobile">
               <div class="card-section">
@@ -153,8 +153,8 @@
   <h3 class= "text-center">Et pour ceux qui veulent un service sur mesure</h3>
   <div class="row">
     <% @hrservices.each do |hrservice| %>
-      <div class="hidden-xs hidden-sm">
-        <div class="col-md-10 col-md-offset-1">
+      <div class="hidden-xs">
+        <div class="col-sm-10 col-sm-offset-1">
           <% if hrservice.ondemand_service? %>
             <div class="card medium">
               <div class="card-section">
@@ -187,10 +187,10 @@
           <% end %>
         </div>
       </div>
-      <div class="visible-xs visible-sm">
+      <div class="visible-xs">
         <div class="col-xs-12">
           <% if hrservice.ondemand_service? %>
-            <div class="card mobile" id="ask">
+            <div class="card mobile ask">
               <div class="card-section">
                 <div class="card-title"><%= hrservice.title %></div>
                 <p class="sml"><%= hrservice.description %><p>
@@ -339,7 +339,7 @@
 
 <div class="hrservices">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
       <span class="scroll">
         <button type="button" class="btn-light" id="scrollup">Revenir au début</button>
       </span>

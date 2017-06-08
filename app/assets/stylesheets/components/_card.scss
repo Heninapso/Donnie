@@ -67,6 +67,15 @@
 .smart {
   height: 82vh;
 }
+.medium {
+  height: 65vh;
+}
+.large {
+  height: 163vh;
+}
+.ask {
+  height: 80vh;
+}
 }
 
 @media only screen and (min-device-width: 360px) {
@@ -78,6 +87,15 @@
 }
 .smart {
   height: 55vh;
+}
+.medium {
+  height: 45vh;
+}
+.large {
+  height: 110vh;
+}
+.ask {
+  height: 60vh;
 }
 }
 
@@ -91,6 +109,12 @@
 .smart {
   height: 28vh
 }
+.medium {
+  height: 35vh;
+}
+.large {
+  height: 83vh;
+}
 }
 
 @media only screen and (min-device-width: 1200px) {
@@ -99,6 +123,9 @@
 }
 .values {
   height: 30vh;
+}
+.large {
+  height: 105vh;
 }
 }
 // end media queries
