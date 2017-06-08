@@ -54,18 +54,6 @@
       <div class="payment-form text-center">
         <p><span class="bold">Prestation souhaitée : </span><%= @order.hrservice %></p>
 
-
-
-
-
-        <%= form_tag order_payment_index_path(@order) do %>
-          <article>
-            <label class="amount">
-              <p><span class="bold">Prix de la prestation : </span><span id="orderAmount"><%= humanized_money(@order.amount) %></span> € </p>
-            </label>
-
-          </article>
-
     <!--#Coupon form begins -->
           <a href="#" id="codePromo"><p class="italic">Vous avez un code promo ?</p></a>
           <span class="codePromoForm hidden">
@@ -78,6 +66,13 @@
 
           <!--#Coupon form ends -->
 
+        <%= form_tag order_payment_index_path(@order) do %>
+          <article>
+            <label class="amount">
+              <p><span class="bold">Prix de la prestation : </span><span id="orderAmount"><%= humanized_money(@order.amount) %></span> € </p>
+            </label>
+
+          </article>
 
           <p class="start-service-notice"><span class="bold">Lancement de la prestation : </span>Après réception de votre paiement, nous vous contactons sous 48h pour fixer la date de démarrage de la prestation.</p>
           <div class="payment-comment"><p><span class="bold">Modes de paiement acceptés :</span>
