@@ -13,21 +13,83 @@
   }
 }
 
+// start Media queries
+@media only screen and (min-device-width: 320px) {
+.hrservices-home {
+  height: 90vh;
+}
+.values {
+  height: 47vh;
+}
+.smart {
+  height: 82vh;
+}
+.medium {
+  height: 65vh;
+}
+.large {
+  height: 163vh;
+}
+.ask {
+  height: 80vh;
+}
+}
+
+@media only screen and (min-device-width: 360px) {
+.hrservices-home {
+  height: 58vh;
+}
+.values {
+  height: 47vh;
+}
+.smart {
+  height: 55vh;
+}
+.medium {
+  height: 45vh;
+}
 .large {
   height: 110vh;
 }
+.ask {
+  height: 60vh;
+}
+}
+
+@media only screen and (min-device-width: 768px) {
+.hrservices-home {
+  height: 52vh;
+}
 .values {
-  height:30vh;
+  height: 22vh;
+}
+.smart {
+  height: 28vh
+}
+.medium {
+  height: 35vh;
+}
+.large {
+  height: 83vh;
+}
+}
+
+@media only screen and (min-device-width: 1200px) {
+.hrservices-home {
+  height: 48vh;
+}
+.values {
+  height: 30vh;
+}
+.large {
+  height: 105vh;
+}
+}
+// end media queries
+
+.values {
   display: flex;
   justify-content: center;
-}
-
-.medium {
-  height: 40vh;
-}
-
-.smart {
-  height: 45vh !important;
 }
 
 .mobile .card-section {
@@ -37,13 +99,6 @@
     line-height: 14px;
     margin-left: -30px
   }
-}
-
-.hrservices-home {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  height: 54vh
 }
 
 .bio-card {
@@ -68,12 +123,14 @@
   }
 }
 
-.card-description h3 {
+.card-description {
+  h3 {
   font-size: 20px;
-}
-.card-description p {
+  } p {
   font-size: 14px;
+  }
 }
+
 .card-content {
   margin-top: 4vh;
   margin-bottom: 2vh;
@@ -174,10 +231,8 @@
   left: 20px;
 }
 
-
 .card-table {
   background-color: $lightgreen;
-  height: 200px;
   background-size: cover !important;
   color: $pgray;
   position: relative;
@@ -190,17 +245,6 @@
     border: 2px solid $keppel
   }
 }
-
-.card-table-mobile {
-  background-color: $lightgreen;
-  background-size: cover !important;
-  color: $pgray;
-  position: relative;
-  margin: 10px 5px;
-  padding: 10px;
-  border-radius: 3px;
-  box-shadow: 2px solid #CCCCCC;
-  &:hover {
-    border: 2px solid $keppel
-  }
+.with-height {
+  height: 200px
 }
