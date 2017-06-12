@@ -3,10 +3,17 @@ puts "Cleaning database..."
 Hrservice.destroy_all
 Meeting.destroy_all
 User.destroy_all
+Coupon.destroy_all
 
 puts "Creating users"
 # lippi = User.create!(first_name: 'Lippi', last_name: 'Horse', email: 'anneso_chambon@hotmail.com', password:'azerty')
 # joe = User.create!(first_name: 'Joe', last_name:'Le Taxi', email: 'heninapso@gmail.com', password: 'azerty')
+
+puts "Creating coupons"
+switch = Coupon.create!(code: "SWITCH", discount_percent: 15, expires_at: Date.today+30)
+wagon = Coupon.create!(code: "WAGON", discount_percent: 15, expires_at: Date.today+30)
+launching = Coupon.create!(code: "LAUNCH", discount_percent: 10, expires_at: Date.today+30)
+
 
 puts "Creating Hrservices"
 feedback_cv_lm = Hrservice.create!(title: "Feedback CV/lettre de motivation", description: "Le feedback que vous n’avez jamais eu sur votre CV et/ou votre lettre de motivation", conditions: ["- Analyse de votre CV par un RH","- Entretien de debriefing 30min (Skype ou face-à-face si vous êtes à Paris)","- Synthèse écrite"], price_cents: 2499, entry_service: true, hrsunit: true, hrsbundle: false, options: "Le prix sera déduit du montant total si vous continuez avec l’Update CV")

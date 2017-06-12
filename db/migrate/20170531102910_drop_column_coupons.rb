@@ -1,5 +1,0 @@
-class DropColumnCoupons < ActiveRecord::Migration[5.0]
-  def change
-    remove_column :orders, :coupon_id
-  end
-end
