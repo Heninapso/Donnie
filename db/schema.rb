@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608150429) do
+ActiveRecord::Schema.define(version: 20170613160256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,9 +42,10 @@ ActiveRecord::Schema.define(version: 20170608150429) do
     t.boolean  "hrsunit"
     t.boolean  "hrsbundle"
     t.text     "conditions",       default: [],              array: true
-    t.text     "options"
     t.text     "subtitle"
     t.integer  "price_cents",      default: 0,  null: false
+    t.text     "comments"
+    t.text     "options",                                    array: true
   end
 
   create_table "meetings", force: :cascade do |t|

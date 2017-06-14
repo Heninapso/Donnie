@@ -101,9 +101,25 @@
                     <%= hidden_field_tag 'hrservice_id', hrservice.id %>
                     <%= submit_tag 'Acheter', class: "btn-light" %>
                   <% end %>
+                  <% if hrservice.comments? %>
+                    <div class="options-section">
+                      <p class="sml italic"><%= hrservice.comments %></p>
+                    </div>
+                  <% end %>
                   <% if hrservice.options? %>
                     <div class="options-section">
-                      <p class="sml italic">Options : <%= hrservice.options %></p>
+                      <p class="sml italic">Options :<br>
+                        <% if hrservice.options.length > 2 && hrservice.options.length > 4 %>
+                          <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€ -
+                          <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                          <%= hrservice.options[4] %> : <%= hrservice.options[5] %>€
+                        <% elsif hrservice.options.length > 2  %>
+                          <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€ -
+                          <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                        <% else %>
+                          <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€
+                        <% end %>
+                      </p>
                     </div>
                   <% end %>
                 </div>
@@ -133,6 +149,11 @@
                     <%= submit_tag 'Acheter', class: "btn-small" %>
                   <% end %>
                 </div>
+                <% if hrservice.comments? %>
+                  <div class="options">
+                    <p class="sml italic"><%= hrservice.comments %></p>
+                  </div>
+                <% end %>
                 <% if hrservice.options? %>
                   <div class="options">
                     <p class="sml italic">Options : <%= hrservice.options %></p>
@@ -163,9 +184,25 @@
                 <% hrservice.conditions.each do |condition| %>
                   <ul><%= condition %></ul>
                 <% end %>
+                <% if hrservice.comments? %>
+                  <div class="options">
+                    <p class="sml italic"><%= hrservice.comments %></p>
+                  </div>
+                <% end %>
                 <% if hrservice.options? %>
                   <div class="options">
-                    <p class="sml italic">Option : <%= hrservice.options %></p>
+                    <p class="sml italic">Options :<br>
+                      <% if hrservice.options.length > 2 && hrservice.options.length > 4 %>
+                        <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€ -
+                        <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                        <%= hrservice.options[4] %> : <%= hrservice.options[5] %>€
+                      <% elsif hrservice.options.length > 2  %>
+                        <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€ -
+                        <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                      <% else %>
+                        <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€
+                      <% end %>
+                    </p>
                   </div>
                 <% end %>
                 <div class="card-button-bottom-left">
@@ -266,8 +303,22 @@
               <% else %>
                 <li class="margin bold"><%= humanized_money(hrservice.price, precision: 2, strip_insignificant_zeros: true) %> €</li>
               <% end %>
+              <% if hrservice.comments? %>
+                <li class="margin"><%= hrservice.comments %></li>
+              <% end %>
               <% if hrservice.options? %>
-                <li class="margin">Options : <%= hrservice.options %></li>
+                <li class="margin "><span class="underscore">Options :</span><br>
+                  <% if hrservice.options.length > 2 && hrservice.options.length > 4 %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€<br>
+                    <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€<br>
+                    <%= hrservice.options[4] %> : <%= hrservice.options[5] %>€
+                  <% elsif hrservice.options.length > 2  %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€<br>
+                    <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                  <% else %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€
+                  <% end %>
+                </li>
               <% end %>
               <%= form_tag orders_path do %>
                 <%= hidden_field_tag 'hrservice_id', hrservice.id %>
@@ -314,10 +365,26 @@
         </div>
         <div class="row">
           <div class="col-xs-12 row-item">
+            <% if hrservice.comments? %>
+              <div class="ul-no-bullets ">
+                <li><%= hrservice.comments %></li>
+              </div>
+            <% end %>
             <% if hrservice.options? %>
               <p class="bold">Options :</p>
               <div class="ul-no-bullets ">
-                <li><%= hrservice.options %></li>
+                <li class="margin ">Options :<br>
+                  <% if hrservice.options.length > 2 && hrservice.options.length > 4 %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€<br>
+                    <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€<br>
+                    <%= hrservice.options[4] %> : <%= hrservice.options[5] %>€
+                  <% elsif hrservice.options.length > 2  %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€<br>
+                    <%= hrservice.options[2] %> : <%= hrservice.options[3] %>€
+                  <% else %>
+                    <%= hrservice.options[0] %> : <%= hrservice.options[1] %>€
+                  <% end %>
+                </li>
               </div>
             <% end %>
           </div>
