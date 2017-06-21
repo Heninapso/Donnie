@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:show, :create] do
     member do
-      post :check_coupon_code
+      post :options, :check_coupon_code
     end
     resources :payment, only: [:new, :create]
   end

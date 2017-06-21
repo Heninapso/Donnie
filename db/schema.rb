@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613160256) do
+ActiveRecord::Schema.define(version: 20170615132703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,14 +73,18 @@ ActiveRecord::Schema.define(version: 20170613160256) do
 
   create_table "orders", force: :cascade do |t|
     t.string   "state"
-    t.string   "hrservice"
-    t.integer  "amount_cents", default: 0, null: false
+    t.string   "hrservice_title"
+    t.integer  "amount_cents",       default: 0, null: false
     t.json     "payment"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "coupon_id"
     t.string   "couponCode"
+    t.integer  "option_price"
+    t.integer  "hrservice_id"
+    t.text     "option_description",                          array: true
     t.index ["coupon_id"], name: "index_orders_on_coupon_id", using: :btree
+    t.index ["hrservice_id"], name: "index_orders_on_hrservice_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -105,4 +109,5 @@ ActiveRecord::Schema.define(version: 20170613160256) do
   add_foreign_key "meetings", "hrservices"
   add_foreign_key "meetings", "users"
   add_foreign_key "orders", "coupons"
+  add_foreign_key "orders", "hrservices"
 end

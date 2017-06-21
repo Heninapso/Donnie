@@ -2,6 +2,7 @@
 class OrdersController < ApplicationController
   ## TEST ONLY - REMOVE WHEN WORKING
   skip_before_action :authenticate_user!, only: [ :create ]
+  before_action :set_order, only: [:check_coupon_code, :options]
 
   def show
     @order = Order.where(state: 'paid').find(params[:id])
@@ -10,12 +11,11 @@ class OrdersController < ApplicationController
 
   def create
     @hrservice = Hrservice.find(params[:hrservice_id])
-    order = Order.create!(hrservice: @hrservice.title, amount: @hrservice.price, state: 'pending')
+    order = Order.create!(hrservice: @hrservice, hrservice_title: @hrservice.title, amount: @hrservice.price, state: 'pending', option_description: @hrservice.options)
     redirect_to new_order_payment_path(order)
   end
 
   def check_coupon_code
-    @order = Order.find(params[:id])
     @coupon = params[:couponCode]
     if !@coupon.blank?
       @coupon_discount = Coupon.get(@coupon)
@@ -35,6 +35,25 @@ class OrdersController < ApplicationController
         end
       end
     end
+  end
+
+  def options
+    @option = params[:option_selected].to_i
+    option_description = @order.option_description[@option.to_i - 1]
+    #option_selected matches the position of the option price in option_description array
+    option_price = @order.option_description[@option].to_i * 100
+    price_with_option = (@order.amount_cents + option_price) / 100
+    @order.update(amount: price_with_option, option_price: option_price, option_description: [option_description])
+    redirect_to new_order_payment_path(@order)
+
+  #get option chosed from view > @option_selected
+  #if option[n]selected, price = price + (option[n+1].to_i * 100)
+  end
+
+  private
+
+  def set_order
+    @order = Order.find(params[:id])
   end
 
 end

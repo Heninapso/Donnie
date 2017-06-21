@@ -52,9 +52,22 @@
   <div class="row">
     <div class="col-xs-12 col-md-4 col-md-offset-4">
       <div class="payment-form text-center">
-        <p><span class="bold">Prestation souhaitée : </span><%= @order.hrservice %></p>
+        <p><span class="bold">Prestation souhaitée : </span><%= @order.hrservice.title %></p>
 
-    <!--#Coupon form begins -->
+          <% if @order.option_description? %>
+            <span id="option_section"><p>Options disponibles : </p>
+              <%= form_tag options_order_path(@order) do %>
+                <%= select_tag(:option_selected, options_for_select([['No options', 0, { data_price: 0}],
+                  [@order.option_description[0], 1, { data_price: @order.option_description[1]}],
+                  [@order.option_description[2], 3, { data_price: @order.option_description[3]}]
+                ]))%>
+                <%= submit_tag "Appliquer l'option", id: 'option-submit', class: 'btn-small-mediumaqua'%>
+              <% end %>
+            </span>
+          <% end %>
+
+
+          <!--#Coupon form begins -->
           <a href="#" id="codePromo"><p class="italic">Vous avez un code promo ?</p></a>
           <span class="codePromoForm hidden">
             <%= form_tag check_coupon_code_order_path(@order) do %>
