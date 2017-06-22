@@ -140,10 +140,24 @@
 }
 
 
-// .stripe-button-el span {
-//   font-family: arial;
-//   font-size: 20px;
-//   border-radius: 0;
-//   background-image: none;
-//   background-color: green;
-// }
+.btn-payment-page {
+  background: #00BBFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #4989EA, #00BBFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #4989EA, #00BBFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  border-style: none;
+  line-height: 13px;
+  font-size: 14px;
+  border-radius: 0.25em;
+  &:hover {
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4989EA, #00BBFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4989EA, #00BBFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-decoration: none;
+    color: white;
+  }
+}

@@ -38,16 +38,21 @@ class OrdersController < ApplicationController
   end
 
   def options
-    @option = params[:option_selected].to_i
-    option_description = @order.option_description[@option.to_i - 1]
-    #option_selected matches the position of the option price in option_description array
-    option_price = @order.option_description[@option].to_i * 100
+    option = params[:option_selected]
+    # access price in @order.option_description array which is N+1 from option description, then *100 to match Amount_cents
+    option_price = @order.option_description[(@order.option_description.index(option) + 1)].to_i * 100
     price_with_option = (@order.amount_cents + option_price) / 100
-    @order.update(amount: price_with_option, option_price: option_price, option_description: [option_description])
+    @order.update(amount: price_with_option, option_price: option_price, option_description: [option])
     redirect_to new_order_payment_path(@order)
 
-  #get option chosed from view > @option_selected
-  #if option[n]selected, price = price + (option[n+1].to_i * 100)
+    # @option = params[:option_selected].to_i
+    # option_description = @order.option_description[@option.to_i - 1]
+    # #option_selected matches the position of the option price in option_description array
+    # option_price = @order.option_description[@option].to_i * 100
+    # price_with_option = (@order.amount_cents + option_price) / 100
+    # @order.update(amount: price_with_option, option_price: option_price, option_description: [option_description])
+    # redirect_to new_order_payment_path(@order)
+
   end
 
   private
