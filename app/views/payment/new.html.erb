@@ -58,8 +58,8 @@
             <div id="option_section"><p class= "italic">Options disponibles :</p>
               <%= form_tag options_order_path(@order) do %>
                 <%= select_tag(:option_selected, options_for_select([
-                  [@order.option_description[0], @order.option_description[0], { 'data-price' => @order.option_description[1]}],
-                  [@order.option_description[2],@order.option_description[2], { 'data-price' => @order.option_description[3]}]
+                  [@order.option_description[0], @order.option_description[0], 'data-price' => @order.option_description[1]],
+                  [@order.option_description[2],@order.option_description[2], 'data-price' => @order.option_description[3]]
                 ]))%>
                 <%= submit_tag "Appliquer l'option", id: 'option-submit', class: 'btn-payment-page'%>
               <% end %>
