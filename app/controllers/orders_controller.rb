@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     if !@coupon.blank?
       @coupon_discount = Coupon.get(@coupon)
       if @coupon.nil?
-        flash[:alert] = "Hum, on dirait que votre code promo n'est pas valide...."
+        flash[:alert] = "Hum, on dirait que votre code promo n'est pas valide ou expiré...."
         redirect_to new_order_payment_path(@order)
         return
       else
