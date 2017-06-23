@@ -52,16 +52,31 @@
   <div class="row">
     <div class="col-xs-12 col-md-4 col-md-offset-4">
       <div class="payment-form text-center">
-        <p><span class="bold">Prestation souhaitée : </span><%= @order.hrservice %></p>
+        <p><span class="bold">Prestation souhaitée : </span><%= @order.hrservice.title %></p>
 
-    <!--#Coupon form begins -->
-          <a href="#" id="codePromo"><p class="italic">Vous avez un code promo ?</p></a>
-          <span class="codePromoForm hidden">
-            <%= form_tag check_coupon_code_order_path(@order) do %>
-              <%= text_field_tag(:couponCode, 'Tapez ici votre code', class: 'italic') %>
-              <%= submit_tag 'Appliquer la promo', id: 'coupon-submit', class: 'btn-small-mediumaqua'%>
+          <% if @order.option_description? %>
+            <div id="option_section"><p class= "italic">Options disponibles :</p>
+              <%= form_tag options_order_path(@order) do %>
+                <%= select_tag(:option_selected, options_for_select([
+                  [@order.option_description[0], @order.option_description[0], { 'data-price' => @order.option_description[1]}],
+                  [@order.option_description[2],@order.option_description[2], { 'data-price' => @order.option_description[3]}]
+                ]))%>
+                <%= submit_tag "Appliquer l'option", id: 'option-submit', class: 'btn-payment-page'%>
+              <% end %>
+            </div>
+          <% end %>
 
-            <% end %>
+
+          <!--#Coupon form begins -->
+          <span id="promo_section">
+            <a href="#" id="codePromo"><p class="italic">Vous avez un code promo ?</p></a>
+            <span class="codePromoForm hidden">
+              <%= form_tag check_coupon_code_order_path(@order) do %>
+                <%= text_field_tag(:couponCode, 'Tapez ici votre code', class: 'italic') %>
+                <%= submit_tag 'Appliquer la promo', id: 'coupon-submit', class: 'btn-payment-page'%>
+
+              <% end %>
+            </span>
           </span>
 
           <!--#Coupon form ends -->

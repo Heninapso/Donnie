@@ -17,3 +17,31 @@
 .amount {
   margin-top: 3vh;
 }
+
+
+#option_section {
+  // display: flex;
+  // justify-content: space-between;
+  margin: 2vh 0 4vh 0;
+}
+
+#option_selected {
+  margin-right: 1vh;
+  font-size: 14px
+}
+
+#promo_section {
+  margin-top: 2vh
+}
+
+#couponCode {
+  margin-right: 1vh;
+  text-align: center;
+  border-radius: 4px;
+  width: 20vh;
+}
+
+.codePromoForm {
+  font-size: 14px;
+  margin-right: 0vh;
+}
