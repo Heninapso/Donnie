@@ -15,14 +15,14 @@
 }
 
 .amount {
-  margin-top: 4vh;
+  margin-top: 3vh;
 }
 
 
 #option_section {
-  display: flex;
-  justify-content: space-between;
-  margin: 2vh 0 2vh 0;
+  // display: flex;
+  // justify-content: space-between;
+  margin: 2vh 0 4vh 0;
 }
 
 #option_selected {
@@ -37,6 +37,8 @@
 #couponCode {
   margin-right: 1vh;
   text-align: center;
+  border-radius: 4px;
+  width: 20vh;
 }
 
 .codePromoForm {

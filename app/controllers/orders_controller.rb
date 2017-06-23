@@ -40,10 +40,15 @@ class OrdersController < ApplicationController
   def options
     option = params[:option_selected]
     # access price in @order.option_description array which is N+1 from option description, then *100 to match Amount_cents
-    option_price = @order.option_description[(@order.option_description.index(option) + 1)].to_i * 100
-    price_with_option = (@order.amount_cents + option_price) / 100
-    @order.update(amount: price_with_option, option_price: option_price, option_description: [option])
-    redirect_to new_order_payment_path(@order)
+    if @order.option_price?
+      flash[:alert] = "Vous avez déjà choisi une option sur ce produit !"
+      redirect_to new_order_payment_path(@order)
+    else
+      option_price = @order.option_description[(@order.option_description.index(option) + 1)].to_i * 100
+      price_with_option = (@order.amount_cents + option_price) / 100
+      @order.update(amount: price_with_option, option_price: option_price, option_description: [option])
+      redirect_to new_order_payment_path(@order)
+    end
 
     # @option = params[:option_selected].to_i
     # option_description = @order.option_description[@option.to_i - 1]
